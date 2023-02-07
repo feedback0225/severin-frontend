@@ -14,7 +14,7 @@
 <body>
 	<div class="wrapper">
 		<div class="top-block top-block_mini top-block_control">
-			<header class="top-block__header header">
+			<header class="top-block__header header lock-padding">
 				<div class="container">
 					<div class="header__content">
 						<a href="#" class="header__logo">
@@ -320,7 +320,7 @@
 					видов и объемов работ, в рамках утвержденного бюджета и графика строительства
 				</p>
 				<div class="top-block__text">
-					<a href="#" class="top-block__more more">
+					<a href="#popup-call" class="top-block__more more popup-link">
 						<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M15 13.5H1V0.5H15V13.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
 							<rect x="4" y="3.5" width="8" height="1" rx="0.5" fill="white" />
@@ -724,7 +724,68 @@
 			</section>
 		</main>
 	</div>
+	<div id="popup-call" class="popup popup_call">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a href="#" class="popup__close close-popup">
+					<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
+						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
+						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
+						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
+							fill="#FC0D1B" />
+						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
+							fill="#FC0D1B" />
+						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
+							fill="#FC0D1B" />
+					</svg>
+				</a>
+				<div class="popup__left">
+					<img loading="lazy" src="img/popup/logo.svg" alt="">
+					<span>
+						Заказать звонок
+					</span>
+					<p>
+						Оставьте заявку, и мы свяжемся с Вами в ближайшее время
+					</p>
+					<form action="#" class="popup__form">
+						<input type="text" placeholder="Имя">
+						<input type="text" placeholder="Телефон" class="phone-mask">
+						<input type="text" placeholder="Ваш вопрос">
+						<div class="popup__check">
+							<input type="checkbox" id="agree">
+							<label for="agree">
+								<span>
+									Я согласен на обработку моих персональных
+									данных <br> и с <a href="confidence.html">политикой
+										конфиденциальности</a>
+								</span>
+							</label>
+						</div>
+						<button href="#" class="popup__more more">
+							<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15 13.5H1V0.5H15V13.5Z" stroke="white" stroke-linecap="round"
+									stroke-linejoin="round" />
+								<rect x="4" y="3.5" width="8" height="1" rx="0.5" fill="white" />
+								<rect x="4" y="6.5" width="8" height="1" rx="0.5" fill="white" />
+								<rect x="4" y="9.5" width="8" height="1" rx="0.5" fill="white" />
+							</svg>
+							<span>Заказать звонок</span>
+						</button>
+					</form>
+				</div>
+				<div class="popup__right">
+					<picture>
+						<source srcset="img/popup/call.png 1x, img/popup/call@2x.png 2x">
+						<img loading="lazy" srcset="img/popup/call.png" alt="team">
+					</picture>
+				</div>
+			</div>
+		</div>
+	</div>
 	<script src="js/ScrollMagic.min.js"></script>
+	<script src="js/air-datepicket.js"></script>
+	<script src="js/imask.js"></script>
 	<script src="js/app.min.js"></script>
 	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 	<script src="js/swiper.js"></script>

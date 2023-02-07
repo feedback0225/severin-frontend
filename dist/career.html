@@ -14,7 +14,7 @@
 <body>
 	<div class="wrapper">
 		<div class="top-block top-block_mini top-block_career">
-			<header class="top-block__header header">
+			<header class="top-block__header header lock-padding">
 				<div class="container">
 					<div class="header__content">
 						<a href="#" class="header__logo">
@@ -650,8 +650,10 @@
 							</p>
 						</div>
 						<div class="watch__right">
-							<img loading="lazy" src="img/about/watch/watch.jpg" alt="video">
-							<a href="#" class="watch__btn">
+							<video preload="auto" autoplay loop playsinline muted>
+								<source src="img/commercial/video.mp4" type='video/mp4' />
+							</video>
+							<a href="#" class="watch__btn btn">
 								<span>Смотреть видео</span>
 								<div class="watch__play play">
 									<img loading="lazy" src="img/icons/play.svg" alt="play">
@@ -797,10 +799,11 @@
 								Карта сайта
 							</a>
 							<div class="footer__politic">
-								Ознакомиться с <a href="#">Политикой конфиденциальности</a>
+								Ознакомиться <br> с <a href="#">Политикой конфиденциальности</a>
 							</div>
 							<span>
-								© 2004 — 2022 SEVERIN DEVELOPMENT. Все права защищены. Все фотоматериалы, размещенные на сайте,
+								© 2004 — 2022 SEVERIN DEVELOPMENT. <br> Все права защищены. Все фотоматериалы, размещенные на
+								сайте,
 								имеют лицензии, не являются рекламой, носят иллюстративный характер. Копирование текстов без
 								указания источника запрещено.
 							</span>
@@ -936,6 +939,8 @@
 		</footer>
 	</div>
 	<script src="js/ScrollMagic.min.js"></script>
+	<script src="js/air-datepicket.js"></script>
+	<script src="js/imask.js"></script>
 	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 	<script src="js/swiper.js"></script>
 	<script src="js/app.min.js"></script>

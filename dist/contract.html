@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/air-datepicket.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
 	<title>Document</title>
@@ -14,7 +15,7 @@
 <body>
 	<div class="wrapper">
 		<div class="top-block top-block_mini">
-			<header class="top-block__header header">
+			<header class="top-block__header header lock-padding">
 				<div class="container">
 					<div class="header__content">
 						<a href="#" class="header__logo">
@@ -319,7 +320,7 @@
 					и гарантируем безусловное качество строительства.
 				</p>
 				<div class="top-block__text">
-					<a href="#" class="top-block__more more">
+					<a href="#popup-call" class="top-block__more more popup-link">
 						<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M15 13.5H1V0.5H15V13.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
 							<rect x="4" y="3.5" width="8" height="1" rx="0.5" fill="white" />
@@ -708,60 +709,48 @@
 						<span class="industries__item industries__item_accordion">
 							<a href="#">
 								Инженерная подготовка территории
-								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" clip-rule="evenodd"
-										d="M8.97675 0H7.23256C7.07752 0 7 0.0592593 7 0.177778V7H0.186047C0.0620155 7 0 7.07407 0 7.22222V8.88889C0 9.03704 0.0620155 9.11111 0.186047 9.11111H7V15.8222C7 15.9407 7.07752 16 7.23256 16H8.97675C9.13178 16 9.2093 15.9407 9.2093 15.8222V9.11111H15.814C15.938 9.11111 16 9.03704 16 8.88889V7.22222C16 7.07407 15.938 7 15.814 7H9.2093V0.177778C9.2093 0.0592593 9.13178 0 8.97675 0Z"
-										fill="#363636" />
+								<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14 7.95096L0 7.95096L0 6.0498L14 6.0498V7.95096Z" fill="#363636" />
+									<path d="M6.05197 14L6.05197 -8.31019e-08L7.95312 0L7.95312 14L6.05197 14Z" fill="#363636" />
 								</svg>
-								<svg width="16" height="3" viewBox="0 0 16 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M0.186047 0H15.814C15.938 0 16 0.074074 16 0.222222V1.88889C16 2.03704 15.938 2.11111 15.814 2.11111H0.186047C0.0620155 2.11111 0 2.03704 0 1.88889V0.222222C0 0.074074 0.0620155 0 0.186047 0Z"
-										fill="#363636" />
+								<svg width="14" height="3" viewBox="0 0 14 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14 2.0498L0 2.0498L0 0.0498047L14 0.0498047V2.0498Z" fill="#363636" />
 								</svg>
 							</a>
 						</span>
 						<span class="industries__item industries__item_accordion">
 							<a href="#">
 								Земляные работы
-								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" clip-rule="evenodd"
-										d="M8.97675 0H7.23256C7.07752 0 7 0.0592593 7 0.177778V7H0.186047C0.0620155 7 0 7.07407 0 7.22222V8.88889C0 9.03704 0.0620155 9.11111 0.186047 9.11111H7V15.8222C7 15.9407 7.07752 16 7.23256 16H8.97675C9.13178 16 9.2093 15.9407 9.2093 15.8222V9.11111H15.814C15.938 9.11111 16 9.03704 16 8.88889V7.22222C16 7.07407 15.938 7 15.814 7H9.2093V0.177778C9.2093 0.0592593 9.13178 0 8.97675 0Z"
-										fill="#363636" />
+								<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14 7.95096L0 7.95096L0 6.0498L14 6.0498V7.95096Z" fill="#363636" />
+									<path d="M6.05197 14L6.05197 -8.31019e-08L7.95312 0L7.95312 14L6.05197 14Z" fill="#363636" />
 								</svg>
-								<svg width="16" height="3" viewBox="0 0 16 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M0.186047 0H15.814C15.938 0 16 0.074074 16 0.222222V1.88889C16 2.03704 15.938 2.11111 15.814 2.11111H0.186047C0.0620155 2.11111 0 2.03704 0 1.88889V0.222222C0 0.074074 0.0620155 0 0.186047 0Z"
-										fill="#363636" />
+								<svg width="14" height="3" viewBox="0 0 14 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14 2.0498L0 2.0498L0 0.0498047L14 0.0498047V2.0498Z" fill="#363636" />
 								</svg>
 							</a>
 						</span>
 						<span class="industries__item industries__item_accordion">
 							<a href="#">
 								Общестроительные работы
-								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" clip-rule="evenodd"
-										d="M8.97675 0H7.23256C7.07752 0 7 0.0592593 7 0.177778V7H0.186047C0.0620155 7 0 7.07407 0 7.22222V8.88889C0 9.03704 0.0620155 9.11111 0.186047 9.11111H7V15.8222C7 15.9407 7.07752 16 7.23256 16H8.97675C9.13178 16 9.2093 15.9407 9.2093 15.8222V9.11111H15.814C15.938 9.11111 16 9.03704 16 8.88889V7.22222C16 7.07407 15.938 7 15.814 7H9.2093V0.177778C9.2093 0.0592593 9.13178 0 8.97675 0Z"
-										fill="#363636" />
+								<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14 7.95096L0 7.95096L0 6.0498L14 6.0498V7.95096Z" fill="#363636" />
+									<path d="M6.05197 14L6.05197 -8.31019e-08L7.95312 0L7.95312 14L6.05197 14Z" fill="#363636" />
 								</svg>
-								<svg width="16" height="3" viewBox="0 0 16 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M0.186047 0H15.814C15.938 0 16 0.074074 16 0.222222V1.88889C16 2.03704 15.938 2.11111 15.814 2.11111H0.186047C0.0620155 2.11111 0 2.03704 0 1.88889V0.222222C0 0.074074 0.0620155 0 0.186047 0Z"
-										fill="#363636" />
+								<svg width="14" height="3" viewBox="0 0 14 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14 2.0498L0 2.0498L0 0.0498047L14 0.0498047V2.0498Z" fill="#363636" />
 								</svg>
 							</a>
 						</span>
 						<span class="industries__item industries__item_accordion">
 							<a href="#">
 								Монтаж наружных инженерных сетей и инженерных сооружений
-								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" clip-rule="evenodd"
-										d="M8.97675 0H7.23256C7.07752 0 7 0.0592593 7 0.177778V7H0.186047C0.0620155 7 0 7.07407 0 7.22222V8.88889C0 9.03704 0.0620155 9.11111 0.186047 9.11111H7V15.8222C7 15.9407 7.07752 16 7.23256 16H8.97675C9.13178 16 9.2093 15.9407 9.2093 15.8222V9.11111H15.814C15.938 9.11111 16 9.03704 16 8.88889V7.22222C16 7.07407 15.938 7 15.814 7H9.2093V0.177778C9.2093 0.0592593 9.13178 0 8.97675 0Z"
-										fill="#363636" />
+								<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14 7.95096L0 7.95096L0 6.0498L14 6.0498V7.95096Z" fill="#363636" />
+									<path d="M6.05197 14L6.05197 -8.31019e-08L7.95312 0L7.95312 14L6.05197 14Z" fill="#363636" />
 								</svg>
-								<svg width="16" height="3" viewBox="0 0 16 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M0.186047 0H15.814C15.938 0 16 0.074074 16 0.222222V1.88889C16 2.03704 15.938 2.11111 15.814 2.11111H0.186047C0.0620155 2.11111 0 2.03704 0 1.88889V0.222222C0 0.074074 0.0620155 0 0.186047 0Z"
-										fill="#363636" />
+								<svg width="14" height="3" viewBox="0 0 14 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14 2.0498L0 2.0498L0 0.0498047L14 0.0498047V2.0498Z" fill="#363636" />
 								</svg>
 							</a>
 							<div class="industries__accordion-block accordion-block">
@@ -822,45 +811,36 @@
 						<span class="industries__item industries__item_accordion">
 							<a href="#">
 								Монтаж внутренних инженерных систем
-								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" clip-rule="evenodd"
-										d="M8.97675 0H7.23256C7.07752 0 7 0.0592593 7 0.177778V7H0.186047C0.0620155 7 0 7.07407 0 7.22222V8.88889C0 9.03704 0.0620155 9.11111 0.186047 9.11111H7V15.8222C7 15.9407 7.07752 16 7.23256 16H8.97675C9.13178 16 9.2093 15.9407 9.2093 15.8222V9.11111H15.814C15.938 9.11111 16 9.03704 16 8.88889V7.22222C16 7.07407 15.938 7 15.814 7H9.2093V0.177778C9.2093 0.0592593 9.13178 0 8.97675 0Z"
-										fill="#363636" />
+								<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14 7.95096L0 7.95096L0 6.0498L14 6.0498V7.95096Z" fill="#363636" />
+									<path d="M6.05197 14L6.05197 -8.31019e-08L7.95312 0L7.95312 14L6.05197 14Z" fill="#363636" />
 								</svg>
-								<svg width="16" height="3" viewBox="0 0 16 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M0.186047 0H15.814C15.938 0 16 0.074074 16 0.222222V1.88889C16 2.03704 15.938 2.11111 15.814 2.11111H0.186047C0.0620155 2.11111 0 2.03704 0 1.88889V0.222222C0 0.074074 0.0620155 0 0.186047 0Z"
-										fill="#363636" />
+								<svg width="14" height="3" viewBox="0 0 14 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14 2.0498L0 2.0498L0 0.0498047L14 0.0498047V2.0498Z" fill="#363636" />
 								</svg>
 							</a>
 						</span>
 						<span class="industries__item  industries__item_accordion">
 							<a href="#">
 								Специальные работы
-								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" clip-rule="evenodd"
-										d="M8.97675 0H7.23256C7.07752 0 7 0.0592593 7 0.177778V7H0.186047C0.0620155 7 0 7.07407 0 7.22222V8.88889C0 9.03704 0.0620155 9.11111 0.186047 9.11111H7V15.8222C7 15.9407 7.07752 16 7.23256 16H8.97675C9.13178 16 9.2093 15.9407 9.2093 15.8222V9.11111H15.814C15.938 9.11111 16 9.03704 16 8.88889V7.22222C16 7.07407 15.938 7 15.814 7H9.2093V0.177778C9.2093 0.0592593 9.13178 0 8.97675 0Z"
-										fill="#363636" />
+								<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14 7.95096L0 7.95096L0 6.0498L14 6.0498V7.95096Z" fill="#363636" />
+									<path d="M6.05197 14L6.05197 -8.31019e-08L7.95312 0L7.95312 14L6.05197 14Z" fill="#363636" />
 								</svg>
-								<svg width="16" height="3" viewBox="0 0 16 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M0.186047 0H15.814C15.938 0 16 0.074074 16 0.222222V1.88889C16 2.03704 15.938 2.11111 15.814 2.11111H0.186047C0.0620155 2.11111 0 2.03704 0 1.88889V0.222222C0 0.074074 0.0620155 0 0.186047 0Z"
-										fill="#363636" />
+								<svg width="14" height="3" viewBox="0 0 14 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14 2.0498L0 2.0498L0 0.0498047L14 0.0498047V2.0498Z" fill="#363636" />
 								</svg>
 							</a>
 						</span>
 						<span class="industries__item industries__item_accordion">
 							<a href="#">
 								Пуско-наладочные работы и запуск в эксплуатацию
-								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" clip-rule="evenodd"
-										d="M8.97675 0H7.23256C7.07752 0 7 0.0592593 7 0.177778V7H0.186047C0.0620155 7 0 7.07407 0 7.22222V8.88889C0 9.03704 0.0620155 9.11111 0.186047 9.11111H7V15.8222C7 15.9407 7.07752 16 7.23256 16H8.97675C9.13178 16 9.2093 15.9407 9.2093 15.8222V9.11111H15.814C15.938 9.11111 16 9.03704 16 8.88889V7.22222C16 7.07407 15.938 7 15.814 7H9.2093V0.177778C9.2093 0.0592593 9.13178 0 8.97675 0Z"
-										fill="#363636" />
+								<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14 7.95096L0 7.95096L0 6.0498L14 6.0498V7.95096Z" fill="#363636" />
+									<path d="M6.05197 14L6.05197 -8.31019e-08L7.95312 0L7.95312 14L6.05197 14Z" fill="#363636" />
 								</svg>
-								<svg width="16" height="3" viewBox="0 0 16 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M0.186047 0H15.814C15.938 0 16 0.074074 16 0.222222V1.88889C16 2.03704 15.938 2.11111 15.814 2.11111H0.186047C0.0620155 2.11111 0 2.03704 0 1.88889V0.222222C0 0.074074 0.0620155 0 0.186047 0Z"
-										fill="#363636" />
+								<svg width="14" height="3" viewBox="0 0 14 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14 2.0498L0 2.0498L0 0.0498047L14 0.0498047V2.0498Z" fill="#363636" />
 								</svg>
 							</a>
 							<div class="industries__accordion-block accordion-block">
@@ -1000,41 +980,38 @@
 							</div>
 						</div>
 						<div class="questions__right">
-							<a href="#" class="questions__icon">
-								<!-- <div class="questions__icon-wrap">
+							<a href="#popup-meeting" class="questions__icon popup-link">
+								<div class="questions__icon-wrap">
 									<video>
 										<source src="img/icons-video/calendar.mp4" type="video/mp4">
 										</source>
 									</video>
 									<img loading="lazy" src="img/icons/calendar.jpg" alt="icon">
-								</div> -->
-								<div class="lottie-calendar"></div>
+								</div>
 								<span>
 									Назначить <br> встречу
 								</span>
 							</a>
-							<a href="#" class="questions__icon">
-								<!-- <div class="questions__icon-wrap">
+							<a href="#popup-call" class="questions__icon popup-link">
+								<div class="questions__icon-wrap">
 									<video>
 										<source src="img/icons-video/call.mp4" type="video/mp4">
 										</source>
 									</video>
 									<img loading="lazy" src="img/icons/call.jpg" alt="icon">
-								</div> -->
-								<div class="lottie-call"></div>
+								</div>
 								<span>
 									Заказать <br> звонок
 								</span>
 							</a>
-							<a href="#" class="questions__icon">
-								<!-- <div class="questions__icon-wrap">
+							<a href="#popup-message" class="questions__icon popup-link">
+								<div class="questions__icon-wrap">
 									<video>
 										<source src="img/icons-video/email.mp4" type="video/mp4">
 										</source>
 									</video>
 									<img loading="lazy" src="img/icons/email.jpg" alt="icon">
-								</div> -->
-								<div class="lottie-message"></div>
+								</div>
 								<span>
 									Написать <br> сообщение
 								</span>
@@ -1088,10 +1065,11 @@
 								Карта сайта
 							</a>
 							<div class="footer__politic">
-								Ознакомиться с <a href="#">Политикой конфиденциальности</a>
+								Ознакомиться <br> с <a href="#">Политикой конфиденциальности</a>
 							</div>
 							<span>
-								© 2004 — 2022 SEVERIN DEVELOPMENT. Все права защищены. Все фотоматериалы, размещенные на сайте,
+								© 2004 — 2022 SEVERIN DEVELOPMENT. <br> Все права защищены. Все фотоматериалы, размещенные на
+								сайте,
 								имеют лицензии, не являются рекламой, носят иллюстративный характер. Копирование текстов без
 								указания источника запрещено.
 							</span>
@@ -1226,6 +1204,357 @@
 			<div class="footer__line"></div>
 		</footer>
 	</div>
+	<div id="popup-call" class="popup popup_call">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a href="#" class="popup__close close-popup">
+					<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
+						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
+						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
+						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
+							fill="#FC0D1B" />
+						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
+							fill="#FC0D1B" />
+						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
+							fill="#FC0D1B" />
+					</svg>
+				</a>
+				<div class="popup__left">
+					<img loading="lazy" src="img/popup/logo.svg" alt="">
+					<span>
+						Заказать звонок
+					</span>
+					<p>
+						Оставьте заявку, и мы свяжемся с Вами в ближайшее время
+					</p>
+					<form action="#" class="popup__form">
+						<input type="text" placeholder="Имя">
+						<input type="text" placeholder="Телефон" class="phone-mask">
+						<input type="text" placeholder="Ваш вопрос">
+						<div class="popup__check">
+							<input type="checkbox" id="agree">
+							<label for="agree">
+								<span>
+									Я согласен на обработку моих персональных
+									данных <br> и с <a href="confidence.html">политикой
+										конфиденциальности</a>
+								</span>
+							</label>
+						</div>
+						<button href="#" class="popup__more more">
+							<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15 13.5H1V0.5H15V13.5Z" stroke="white" stroke-linecap="round"
+									stroke-linejoin="round" />
+								<rect x="4" y="3.5" width="8" height="1" rx="0.5" fill="white" />
+								<rect x="4" y="6.5" width="8" height="1" rx="0.5" fill="white" />
+								<rect x="4" y="9.5" width="8" height="1" rx="0.5" fill="white" />
+							</svg>
+							<span>Заказать звонок</span>
+						</button>
+					</form>
+				</div>
+				<div class="popup__right">
+					<picture>
+						<source srcset="img/popup/call.png 1x, img/popup/call@2x.png 2x">
+						<img loading="lazy" srcset="img/popup/call.png" alt="team">
+					</picture>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="popup-message" class="popup popup_call">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a href="#" class="popup__close close-popup">
+					<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
+						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
+						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
+						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
+							fill="#FC0D1B" />
+						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
+							fill="#FC0D1B" />
+						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
+							fill="#FC0D1B" />
+					</svg>
+				</a>
+				<div class="popup__left">
+					<img loading="lazy" src="img/popup/logo.svg" alt="">
+					<span>
+						Написать сообщение
+					</span>
+					<p>
+						Оставьте Ваше сообщение, и мы с Вами свяжемся
+					</p>
+					<form action="#" class="popup__form">
+						<input type="text" placeholder="Имя">
+						<input type="text" placeholder="E-mail">
+						<input type="text" placeholder="Сообщение">
+						<div class="popup__check">
+							<input type="checkbox" id="agree">
+							<label for="agree">
+								<span>
+									Я согласен на обработку моих персональных
+									данных <br> и с <a href="confidence.html"> политикой
+										конфиденциальности</a>
+								</span>
+							</label>
+						</div>
+						<button href="#" class="popup__more more">
+							<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15 13.5H1V0.5H15V13.5Z" stroke="white" stroke-linecap="round"
+									stroke-linejoin="round" />
+								<rect x="4" y="3.5" width="8" height="1" rx="0.5" fill="white" />
+								<rect x="4" y="6.5" width="8" height="1" rx="0.5" fill="white" />
+								<rect x="4" y="9.5" width="8" height="1" rx="0.5" fill="white" />
+							</svg>
+							<span>Заказать звонок</span>
+						</button>
+					</form>
+				</div>
+				<div class="popup__right">
+					<picture>
+						<source srcset="img/popup/message.png 1x, img/popup/message@2x.png 2x">
+						<img loading="lazy" srcset="img/popup/message.png" alt="team">
+					</picture>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="popup-meeting" class="popup popup_calendar">
+		<div class="popup__body">
+			<div class="popup__content">
+				<img src="img/popup/logo.svg" alt="logo">
+				<a href="#" class="popup__close close-popup">
+					<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
+						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
+						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
+						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
+							fill="#FC0D1B" />
+						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
+							fill="#FC0D1B" />
+						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
+							fill="#FC0D1B" />
+					</svg>
+				</a>
+				<div class="popup__left">
+					<img src="img/popup/logo.svg" alt="logo">
+					<span>
+						30-минутная встреча
+					</span>
+					<p class="popup__time-finish">
+						<span>30 сентября, пятница <br> 14:00</span> (Время Московское)
+					</p>
+					<div class="popup__points">
+						<div>
+							<img src="img/icons/popup-time.svg" alt="icon">
+							<span>
+								30 минут
+							</span>
+						</div>
+						<div>
+							<img src="img/icons/popup-camera.svg" alt="icon">
+							<span>
+								Информация о веб-конференции
+								будет направлена вам после
+								подтверждения
+							</span>
+						</div>
+					</div>
+					<p>
+						Мы расскажем о компании
+						SEVERIN DEVELOPMENT
+						и&nbsp;обсудим ваш проект
+					</p>
+					<button href="#" class="popup__more more">
+						<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M15 13.5H1V0.5H15V13.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+							<rect x="4" y="3.5" width="8" height="1" rx="0.5" fill="white" />
+							<rect x="4" y="6.5" width="8" height="1" rx="0.5" fill="white" />
+							<rect x="4" y="9.5" width="8" height="1" rx="0.5" fill="white" />
+						</svg>
+						<span>Выбрать дату</span>
+					</button>
+				</div>
+				<div class="popup__left-finish">
+					<img src="img/popup/logo.svg" alt="logo">
+					<p>
+						Персональная встреча назначена
+					</p>
+					<p>
+						30 сентября 2023, 13:30
+					</p>
+					<span>
+						Время Московское
+					</span>
+					<span>
+						Детальная информация и ссылка <br> отправлены Вам на почту
+					</span>
+				</div>
+				<div class="popup__right">
+					<picture>
+						<source srcset="img/popup/meeting.png 1x, img/popup/meeting@2x.png 2x">
+						<img loading="lazy" srcset="img/popup/meeting.png" alt="team">
+					</picture>
+					<form action="#" class="popup__time">
+						<div class="popup__calendar">
+							<span class="popup__mini-headline">
+								Выберите дату <span>и время</span>
+							</span>
+							<div id="calendar">
+							</div>
+							<p>
+								Часовой пояс: <span>Москва</span> <span>(14:46)</span>
+							</p>
+							<button href="#" class="popup__more more">
+								<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M15 13.5H1V0.5H15V13.5Z" stroke="white" stroke-linecap="round"
+										stroke-linejoin="round" />
+									<rect x="4" y="3.5" width="8" height="1" rx="0.5" fill="white" />
+									<rect x="4" y="6.5" width="8" height="1" rx="0.5" fill="white" />
+									<rect x="4" y="9.5" width="8" height="1" rx="0.5" fill="white" />
+								</svg>
+								<span>Выбрать время</span>
+							</button>
+						</div>
+						<div class="popup__dates dates">
+							<div class="dates__mob-div">
+								<span class="popup__mini-headline">
+									Выберите время
+								</span>
+								<span class="dates__date">
+									30 сентября 2023, пятница
+								</span>
+								<p>
+									Часовой пояс: <span>Москва</span> <span>(14:46)</span>
+								</p>
+							</div>
+							<span class="dates__date">
+								30 сентября, пятница
+							</span>
+							<div class="dates__item">
+								<input type="radio" id="10:00" name="time" value="10:00">
+								<label for="10:00"><span>10:00</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="10:30" name="time" value="10:30">
+								<label for="10:30"><span>10:30</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="11:00" name="time" value="11:00">
+								<label for="11:00"><span>11:00</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="11:30" name="time" value="11:30">
+								<label for="11:30"><span>11:30</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="12:00" name="time" value="12:00">
+								<label for="12:00"><span>12:00</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="12:30" name="time" value="12:30">
+								<label for="12:30"><span>12:30</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="14:00" name="time" value="14:00">
+								<label for="14:00"><span>14:00</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="14:30" name="time" value="14:30">
+								<label for="14:30"><span>14:30</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="15:00" name="time" value="15:00">
+								<label for="15:00"><span>15:00</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="15:30" name="time" value="15:30">
+								<label for="15:30"><span>15:30</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="16:00" name="time" value="16:00">
+								<label for="16:00"><span>16:00</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="16:30" name="time" value="16:30">
+								<label for="16:30"><span>16:30</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="17:00" name="time" value="17:00">
+								<label for="17:00"><span>17:00</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="17:30" name="time" value="17:30">
+								<label for="17:30"><span>17:30</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="18:00" name="time" value="18:00">
+								<label for="18:00"><span>18:00</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+						</div>
+					</form>
+					<form action="#" class="popup__form">
+						<span class="popup__mini-headline">
+							Контактная информация
+						</span>
+						<p>
+							Оставьте Ваше сообщение, <br> и мы с Вами свяжемся
+						</p>
+						<div class="popup__inputs">
+							<div>
+								<input type="text" placeholder="Имя">
+								<input type="text" placeholder="Компания">
+							</div>
+							<div>
+								<input type="text" placeholder="Телефон" class="phone-mask">
+								<input type="text" placeholder="E-mail">
+							</div>
+						</div>
+						<div class="popup__check">
+							<input type="checkbox" id="agree">
+							<label for="agree">
+								<span>
+									Я согласен на обработку моих персональных
+									данных <br> и с <a href="confidence.html">политикой
+										конфиденциальности</a>
+								</span>
+							</label>
+						</div>
+						<button type="submit" class="popup__more more">
+							<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15 13.5H1V0.5H15V13.5Z" stroke="white" stroke-linecap="round"
+									stroke-linejoin="round" />
+								<rect x="4" y="3.5" width="8" height="1" rx="0.5" fill="white" />
+								<rect x="4" y="6.5" width="8" height="1" rx="0.5" fill="white" />
+								<rect x="4" y="9.5" width="8" height="1" rx="0.5" fill="white" />
+							</svg>
+							<span>Назначить встречу</span>
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/air-datepicket.js"></script>
+	<script src="js/imask.js"></script>
 	<script src="js/ScrollMagic.min.js"></script>
 	<script src="js/lottie.min.js"></script>
 	<script src="js/animations.js"></script>
