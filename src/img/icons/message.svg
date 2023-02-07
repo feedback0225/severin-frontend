@@ -1,0 +1,6 @@
+<svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="13.5" width="13" height="21" rx="1.5" transform="rotate(-90 0.5 13.5)" stroke="white"/>
+<path d="M20.9526 1L11.0002 10L1.04785 1" stroke="white"/>
+<line y1="-0.5" x2="8.87568" y2="-0.5" transform="matrix(0.826227 -0.563337 0.599128 0.800653 1.04785 13)" stroke="white"/>
+<line y1="-0.5" x2="8.87568" y2="-0.5" transform="matrix(0.826227 0.563337 -0.599128 0.800653 13.6191 8)" stroke="white"/>
+</svg>
