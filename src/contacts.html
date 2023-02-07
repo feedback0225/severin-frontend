@@ -17,7 +17,7 @@
 <body>
 	<div class="wrapper">
 		<div class="top-block  top-block_contacts">
-			<header class="top-block__header header">
+			<header class="top-block__header header lock-padding">
 				<div class="container">
 					<div class="header__content">
 						<a href="#" class="header__logo">
@@ -481,7 +481,7 @@
 						</div>
 					</div>
 					<div class="questions__right">
-						<a href="#" class="questions__icon">
+						<a href="#popup-meeting" class="questions__icon popup-link">
 							<div class="questions__icon-wrap">
 								<video>
 									<source src="@img/icons-video/calendar.mp4" type="video/mp4">
@@ -493,7 +493,7 @@
 								Назначить <br> встречу
 							</span>
 						</a>
-						<a href="#" class="questions__icon">
+						<a href="#popup-call" class="questions__icon popup-link">
 							<div class="questions__icon-wrap">
 								<video>
 									<source src="@img/icons-video/call.mp4" type="video/mp4">
@@ -505,7 +505,7 @@
 								Заказать <br> звонок
 							</span>
 						</a>
-						<a href="#" class="questions__icon">
+						<a href="#popup-message" class="questions__icon popup-link">
 							<div class="questions__icon-wrap">
 								<video>
 									<source src="@img/icons-video/email.mp4" type="video/mp4">
@@ -566,10 +566,11 @@
 								Карта сайта
 							</a>
 							<div class="footer__politic">
-								Ознакомиться с <a href="#">Политикой конфиденциальности</a>
+								Ознакомиться <br> с <a href="#">Политикой конфиденциальности</a>
 							</div>
 							<span>
-								© 2004 — 2022 SEVERIN DEVELOPMENT. Все права защищены. Все фотоматериалы, размещенные на сайте,
+								© 2004 — 2022 SEVERIN DEVELOPMENT. <br> Все права защищены. Все фотоматериалы, размещенные на
+								сайте,
 								имеют лицензии, не являются рекламой, носят иллюстративный характер. Копирование текстов без
 								указания источника запрещено.
 							</span>
@@ -704,7 +705,7 @@
 			<div class="footer__line"></div>
 		</footer>
 	</div>
-	<!-- <div id="popup" class="popup popup_success open">
+	<div id="popup-call" class="popup popup_call">
 		<div class="popup__body">
 			<div class="popup__content">
 				<a href="#" class="popup__close close-popup">
@@ -721,41 +722,7 @@
 					</svg>
 				</a>
 				<div class="popup__left">
-					<img src="img/popup/logo.svg" alt="logo">
-					<span>
-						Ваша заявка <br> успешно отправлена
-					</span>
-					<p>
-						Спасибо за проявленный интерес!
-					</p>
-				</div>
-				<div class="popup__right">
-					<picture>
-						<source srcset="img/popup/cube.png 1x, img/popup/cube@2x.png 2x">
-						<img loading="lazy" srcset="img/popup/cube.png" alt="team">
-					</picture>
-				</div>
-			</div>
-		</div>
-	</div> -->
-	<!-- <div id="popup-call" class="popup popup_call open">
-		<div class="popup__body">
-			<div class="popup__content">
-				<a href="#" class="popup__close close-popup">
-					<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
-						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
-						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
-						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
-							fill="#FC0D1B" />
-						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
-							fill="#FC0D1B" />
-						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
-							fill="#FC0D1B" />
-					</svg>
-				</a>
-				<div class="popup__left">
-					<img src="img/popup/logo.svg" alt="logo">
+					<img loading="lazy" src="img/popup/logo.svg" alt="">
 					<span>
 						Заказать звонок
 					</span>
@@ -771,12 +738,12 @@
 							<label for="agree">
 								<span>
 									Я согласен на обработку моих персональных
-									данных <br> и с <a href="http://93.188.42.12/upload/pdf/politic.pdf">политикой
+									данных <br> и с <a href="confidence.html">политикой
 										конфиденциальности</a>
 								</span>
 							</label>
 						</div>
-						<a href="#" class="popup__more more">
+						<button href="#" class="popup__more more">
 							<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M15 13.5H1V0.5H15V13.5Z" stroke="white" stroke-linecap="round"
 									stroke-linejoin="round" />
@@ -785,7 +752,7 @@
 								<rect x="4" y="9.5" width="8" height="1" rx="0.5" fill="white" />
 							</svg>
 							<span>Заказать звонок</span>
-						</a>
+						</button>
 					</form>
 				</div>
 				<div class="popup__right">
@@ -796,8 +763,8 @@
 				</div>
 			</div>
 		</div>
-	</div> -->
-	<!-- <div id="popup-message" class="popup popup_call open">
+	</div>
+	<div id="popup-message" class="popup popup_call">
 		<div class="popup__body">
 			<div class="popup__content">
 				<a href="#" class="popup__close close-popup">
@@ -814,7 +781,7 @@
 					</svg>
 				</a>
 				<div class="popup__left">
-				<img src="img/popup/logo.svg" alt="logo">
+					<img loading="lazy" src="img/popup/logo.svg" alt="">
 					<span>
 						Написать сообщение
 					</span>
@@ -830,12 +797,12 @@
 							<label for="agree">
 								<span>
 									Я согласен на обработку моих персональных
-									данных <br> и с <a href="http://93.188.42.12/upload/pdf/politic.pdf">политикой
+									данных <br> и с <a href="confidence.html"> политикой
 										конфиденциальности</a>
 								</span>
 							</label>
 						</div>
-						<a href="#" class="popup__more more">
+						<button href="#" class="popup__more more">
 							<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M15 13.5H1V0.5H15V13.5Z" stroke="white" stroke-linecap="round"
 									stroke-linejoin="round" />
@@ -844,7 +811,7 @@
 								<rect x="4" y="9.5" width="8" height="1" rx="0.5" fill="white" />
 							</svg>
 							<span>Заказать звонок</span>
-						</a>
+						</button>
 					</form>
 				</div>
 				<div class="popup__right">
@@ -855,245 +822,8 @@
 				</div>
 			</div>
 		</div>
-	</div> -->
-	<!-- <div id="popup-fail" class="popup popup_fail open">
-		<div class="popup__body">
-			<div class="popup__content">
-				<a href="#" class="popup__close close-popup">
-					<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
-						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
-						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
-						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
-							fill="#FC0D1B" />
-						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
-							fill="#FC0D1B" />
-						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
-							fill="#FC0D1B" />
-					</svg>
-				</a>
-				<div class="popup__left">
-					<span>
-						Попробуйте ещё раз, пожалуйста
-					</span>
-					<p>
-						Ваше сообщение не было отправлено
-					</p>
-				</div>
-			</div>
-		</div>
-	</div> -->
-	<!-- <div id="popup-review" class="popup popup_politic open">
-		<div class="popup__body">
-			<div class="popup__content">
-				<a href="#" class="popup__close close-popup">
-					<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
-						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
-						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
-						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
-							fill="#FC0D1B" />
-						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
-							fill="#FC0D1B" />
-						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
-							fill="#FC0D1B" />
-					</svg>
-				</a>
-				<div class="popup__left">
-					<img src="img/popup/logo.svg" alt="logo">
-					<div class="popup__header">
-						<span>
-							Жилой комплекс <br> ONE TRINITY PLACE
-						</span>
-						<a href="#" download class="popup__download download">
-							<span>
-								Ознакомиться <br> с оригиналом
-							</span>
-							<div class="download__pdf pdf pdf_black">
-								<span>
-									PDF
-								</span>
-							</div>
-						</a>
-					</div>
-					<div class="popup__main">
-						<p>
-							Компания GHP Group (в лице ООО «Цветение сливы») благодарит компанию SEVERIN DEVELOPMENT за
-							сотрудничество по проекту строительства элитного жилого комплекса «ONE TRINITY PLACE»,
-							расположенного по адресу: г.Санкт-Петербург, набережная адмирала Лазарева, участок 7 (севернее
-							дома, 22 литера Щ).
-						</p>
-						<p>
-							В период с марта 2017 г. по март 2021 г. специалистами SEVERIN DEVELOPMENT были успешно оказаны
-							услуги строительного контроля, включающие:
-						</p>
-						<ul>
-							<li>
-								<span>1.</span>
-								контроль за соблюдением графика работ
-								Генерального подрядчика;
-							</li>
-							<li>
-								<span>2.</span>
-								проверку рабочей документации на соответствие
-								требованиям заказчика;
-							</li>
-							<li>
-								<span>3.</span>
-								контроль качества и технологии производства
-								строительно-монтажных работ, выполняемых
-								Генеральным подрядчиком и его субподрядчиками;
-							</li>
-							<li>
-								<span>4.</span>
-								контроль соответствия объемов, качества
-								выполняемых и предъявленных к оплате СМР;
-							</li>
-							<li>
-								<span>5.</span>
-								проверку наличия, правильности и своевременности
-								оформления генеральным подрядчиком
-								исполнительной технической документации;
-							</li>
-							<li>
-								<span>6.</span>
-								участие в инспекциях и взаимодействии с органами
-								госстройнадзора;
-							</li>
-							<li>
-								<span>7.</span>
-								содействие при получении Разрешения на ввод.
-							</li>
-						</ul>
-						<p>
-							В ходе оказания услуг специалисты SEVERIN DEVELOPMENT проявили профессионализм и грамотный подход в
-							решении любых возникающих вопросов.
-						</p>
-						<p>
-							GHP Group отмечает высокое качество оказываемых услуг, гарантированное выполнение взятых на себя
-							обязательств и рекомендует SEVERIN DEVELOPMENT в качестве надежного партнера для организации
-							управления строительством и проведения строительного контроля на проектах строительства жилых и
-							многофункциональных объектов.
-						</p>
-					</div>
-					<div class="popup__footer">
-						<a href="#" download class="popup__download download">
-							<span>
-								Ознакомиться <br> с оригиналом
-							</span>
-							<div class="popup__pdf pdf pdf_black">
-								<span>
-									PDF
-								</span>
-							</div>
-						</a>
-						<a href="#" class="popup__all all">
-							все отзывы
-							<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd" clip-rule="evenodd"
-									d="M7.78694 0.278417L13.7266 6.32784C14.0911 6.69906 14.0911 7.30094 13.7266 7.67216L7.78694 13.7216C7.42245 14.0928 6.83149 14.0928 6.467 13.7216C6.10251 13.3504 6.10251 12.7485 6.467 12.3773L10.8134 7.95058L0 7.95058L0 6.04942L10.8134 6.04942L6.467 1.62273C6.10251 1.25151 6.10251 0.64964 6.467 0.278417C6.83149 -0.0928057 7.42245 -0.0928057 7.78694 0.278417Z"
-									fill="#FC0D1B" />
-							</svg>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
-	<!-- <div id="popup-politic" class="popup popup_politic open">
-		<div class="popup__body">
-			<div class="popup__content">
-				<a href="#" class="popup__close close-popup">
-					<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
-						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
-						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
-						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
-							fill="#FC0D1B" />
-						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
-							fill="#FC0D1B" />
-						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
-							fill="#FC0D1B" />
-					</svg>
-				</a>
-				<div class="popup__left">
-					<img src="img/popup/logo.svg" alt="logo">
-					<div class="popup__header">
-						<span>
-							Политика конфиденциальности
-						</span>
-					</div>
-					<div class="popup__main">
-						<p>
-							Компания GHP Group (в лице ООО «Цветение сливы») благодарит компанию SEVERIN DEVELOPMENT за
-							сотрудничество по проекту строительства элитного жилого комплекса «ONE TRINITY PLACE»,
-							расположенного
-							по адресу: г.Санкт-Петербург, набережная адмирала Лазарева, участок 7 (севернее дома, 22 литера Щ).
-						</p>
-						<p>
-							В период с марта 2017 г. по март 2021 г. специалистами SEVERIN DEVELOPMENT были успешно оказаны
-							услуги
-							строительного контроля, включающие:
-						</p>
-						<ul>
-							<li>
-								<span>1.</span>
-								контроль за соблюдением графика
-								Генерального подрядчика;
-							</li>
-							<li>
-								<span>2.</span>
-								проверку рабочей документации на
-								соответствие требованиям заказчика;
-							</li>
-							<li>
-								<span>3.</span>
-								контроль качества и технологии
-								производства строительно-монтажных
-								работ, выполняемых Генеральным
-								подрядчиком и его субподрядчиками;
-							</li>
-							<li>
-								<span>4.</span>
-								контроль соответствия объемов,
-								качествавыполняемых и предъявленных
-								к оплате СМР;
-							</li>
-							<li>
-								<span>5.</span>
-								проверку наличия, правильности
-								и своевременности оформления
-								генеральным подрядчиком
-								исполнительной технической
-								документации;
-							</li>
-							<li>
-								<span>6.</span>
-								участие в инспекциях и взаимодействии
-								с органами госстройнадзора;
-							</li>
-							<li>
-								<span>7.</span>
-								содействие при получении Разрешения
-								на ввод.
-							</li>
-						</ul>
-						<p>
-							В ходе оказания услуг специалисты SEVERIN DEVELOPMENT проявили профессионализм и грамотный подход в
-							решении любых возникающих вопросов.
-						</p>
-						<p>
-							GHP Group отмечает высокое качество оказываемых услуг, гарантированное выполнение взятых на себя
-							обязательств и рекомендует SEVERIN DEVELOPMENT в качестве надежного партнера для организации
-							управления строительством и проведения строительного контроля на проектах строительства жилых и
-							многофункциональных объектов.
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
-	<div id="popup-meeting" class="popup popup_calendar open">
+	</div>
+	<div id="popup-meeting" class="popup popup_calendar">
 		<div class="popup__body">
 			<div class="popup__content">
 				<img src="img/popup/logo.svg" alt="logo">
@@ -1139,7 +869,7 @@
 						SEVERIN DEVELOPMENT
 						и&nbsp;обсудим ваш проект
 					</p>
-					<a href="#" class="popup__more more">
+					<button href="#" class="popup__more more">
 						<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M15 13.5H1V0.5H15V13.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
 							<rect x="4" y="3.5" width="8" height="1" rx="0.5" fill="white" />
@@ -1147,7 +877,7 @@
 							<rect x="4" y="9.5" width="8" height="1" rx="0.5" fill="white" />
 						</svg>
 						<span>Выбрать дату</span>
-					</a>
+					</button>
 				</div>
 				<div class="popup__left-finish">
 					<img src="img/popup/logo.svg" alt="logo">
@@ -1179,7 +909,7 @@
 							<p>
 								Часовой пояс: <span>Москва</span> <span>(14:46)</span>
 							</p>
-							<a href="#" class="popup__more more">
+							<button href="#" class="popup__more more">
 								<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M15 13.5H1V0.5H15V13.5Z" stroke="white" stroke-linecap="round"
 										stroke-linejoin="round" />
@@ -1188,7 +918,7 @@
 									<rect x="4" y="9.5" width="8" height="1" rx="0.5" fill="white" />
 								</svg>
 								<span>Выбрать время</span>
-							</a>
+							</button>
 						</div>
 						<div class="popup__dates dates">
 							<div class="dates__mob-div">
@@ -1304,7 +1034,7 @@
 							<label for="agree">
 								<span>
 									Я согласен на обработку моих персональных
-									данных <br> и с <a href="http://93.188.42.12/upload/pdf/politic.pdf">политикой
+									данных <br> и с <a href="confidence.html">политикой
 										конфиденциальности</a>
 								</span>
 							</label>

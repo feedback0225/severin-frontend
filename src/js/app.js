@@ -91,6 +91,27 @@ if (isMobile.any()) {
 
 };
 
+const isiPhone = {
+	iPhone: function () {
+		return navigator.userAgent.match(/iPhone/i);
+	},
+	any: function () {
+		return (
+			isiPhone.iPhone());
+	}
+};
+
+if (isiPhone.any()) {
+	const btns = document.querySelectorAll('.btn');
+	if (btns.length > 0) {
+		btns.forEach(el => {
+			el.style.display = 'none';
+			let video = el.previousElementSibling;
+			video.setAttribute("controls", "controls");
+		});
+	}
+};
+
 header.addEventListener('mouseleave', function (e) {
 	if (document.documentElement.clientWidth > 1024) {
 		header.classList.remove('_hover');
@@ -321,10 +342,10 @@ addEventListener('resize', function () {
 		el.parentElement.classList.remove('_hover');
 	});
 
-	document.body.classList.remove('_lock');
 	header.classList.remove('_hover');
 	menuBody.classList.remove('_active');
 	iconMenu.classList.remove('_active');
+	document.body.classList.remove('_lock');
 
 	if (trigger) {
 		if (document.documentElement.clientWidth > 1024) {
@@ -662,10 +683,17 @@ if (accordeons.length > 0) {
 	})
 }
 
-const playBtns = document.querySelectorAll('.btn');
+document.addEventListener('fullscreenchange', e => {
+	if (e.target.hasAttribute('controls')) {
+		e.target.removeAttribute("controls");
+	} else {
+		e.target.setAttribute("controls", "controls");
+	}
+});
 
+const playBtns = document.querySelectorAll('.btn');
 function openFullscreen(video) {
-	video.add(controls);
+	video.play();
 	if (video.requestFullscreen) {
 		video.requestFullscreen();
 	} else if (video.mozRequestFullScreen) { /* Firefox */
@@ -887,6 +915,7 @@ if (acceptDate) {
 
 if (chooseDate) {
 	chooseDate.addEventListener('click', function (e) {
+		e.preventDefault();
 		popupFirstChild.style.display = 'none';
 		popupRightWrapper.style.display = 'flex';
 	});
@@ -894,6 +923,7 @@ if (chooseDate) {
 
 if (chooseTime) {
 	chooseTime.addEventListener('click', function (e) {
+		e.preventDefault();
 		popupCalendar.style.display = 'none';
 		popupDates.style.display = 'block';
 	});
@@ -901,11 +931,55 @@ if (chooseTime) {
 
 if (meetingComplete) {
 	meetingComplete.addEventListener('click', function (e) {
-		e.preventDefault;
+		e.preventDefault();
 		popupFirstChild.style.display = 'none';
 		popupTimeWrapper.style.display = 'none';
 		popupContacts.style.display = 'none';
 		meetingCompleteInfo.style.display = 'flex';
 		meetingCompleteImg.classList.add('_show');
+	});
+}
+
+// scroll header/back
+
+const backNav = document.querySelector('.back');
+const wrapper = document.querySelector('.wrapper');
+
+window.addEventListener('scroll', function (e) {
+	if (backNav) {
+		if (window.pageYOffset > 1000) {
+			backNav.classList.add('_scroll');
+		} else {
+			backNav.classList.remove('_scroll');
+		}
+	}
+	if (window.pageYOffset > 10) {
+		header.classList.add('_scroll');
+	} else {
+		header.classList.remove('_scroll');
+	}
+});
+
+window.addEventListener('DOMContentLoaded', function (e) {
+	if (window.pageYOffset > 10) {
+		header.classList.add('_scroll');
+	} else {
+		header.classList.remove('_scroll');
+	}
+
+	if (backNav) {
+		wrapper.style.paddingBottom = '88px';
+	}
+})
+
+const scrollTop = document.querySelector('.back__top a');
+
+if (scrollTop) {
+	scrollTop.addEventListener('click', function (e) {
+		e.preventDefault();
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth"
+		});
 	});
 }

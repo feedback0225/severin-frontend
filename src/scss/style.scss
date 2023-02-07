@@ -136,7 +136,7 @@ img {
 		z-index: 2;
 	}
 	&:hover:after {
-		transform: translateY(0%);
+		transform: translateX(0%);
 	}
 	&:after {
 		transition: transform 0.3s ease 0s;
@@ -148,7 +148,7 @@ img {
 		z-index: 1;
 		top: 0;
 		left: 0;
-		transform: translateY(100%);
+		transform: translateX(-100%);
 	}
 	& svg {
 		margin-right: 10px;
@@ -198,7 +198,7 @@ img {
 		background: none;
 		border: 1px solid #fc0d1b;
 		&:hover {
-			background: #fc0d1b;
+			background: #ff0000;
 			border: 1px solid #fff;
 		}
 		&:hover span {
@@ -304,15 +304,15 @@ p:not(:first-of-type) {
 	}
 	& svg {
 		transform: translateX(7px);
-		width: 14px;
-		height: 14px;
+		width: 12px;
+		height: 12px;
 		transition: transform 0.3s ease 0s;
 	}
 }
 
 .trigger1 {
 	position: relative;
-	top: -50px;
+	top: -170px;
 }
 
 // TOP-BLOCK
@@ -371,13 +371,7 @@ p:not(:first-of-type) {
 		z-index: -2;
 	}
 	& .container {
-		height: calc(100% - 97px);
-		@media screen and (max-width: 1024px) {
-			height: calc(100% - 123px);
-		}
-		@media screen and (max-width: 480px) {
-			height: calc(100% - 67px);
-		}
+		height: 100%;
 	}
 	&__content {
 		position: relative;
@@ -747,7 +741,7 @@ p:not(:first-of-type) {
 		& .top-block__item {
 			@media screen and (max-width: 1024px) {
 				display: flex;
-				align-items: center;
+				align-items: flex-start;
 			}
 			& span {
 				font-size: 14px;
@@ -793,6 +787,8 @@ p:not(:first-of-type) {
 			@media screen and (max-width: 1024px) {
 				margin: 0 14px 0 0;
 				font-size: 18px;
+				font-weight: 500;
+				line-height: 120%;
 			}
 			@media screen and (max-width: 480px) {
 				margin: 0 8px 0 0;
@@ -908,9 +904,6 @@ p:not(:first-of-type) {
 				@media screen and (max-width: 425px) {
 					font-size: 12px;
 				}
-				// @media screen and (max-width: 375px) {
-				// 	font-size: 14px;
-				// }
 			}
 			& .pdf {
 				@media screen and (max-width: 550px) {
@@ -1109,8 +1102,13 @@ p:not(:first-of-type) {
 }
 
 .header {
-	padding-top: 40px;
+	padding-top: 30px;
 	transition: background 0.5s ease 0s;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
 	@media screen and (max-width: 480px) {
 		padding-top: 20px;
 	}
@@ -1122,7 +1120,6 @@ p:not(:first-of-type) {
 	}
 	&._hover {
 		background: #f5f5f5;
-		position: relative;
 		z-index: 1000;
 		& .menu__link,
 		& .header__lang {
@@ -1147,11 +1144,24 @@ p:not(:first-of-type) {
 			}
 		}
 	}
+	&._scroll {
+		background: #f5f5f5;
+		& .menu__link,
+		& .header__lang {
+			color: #363636;
+		}
+		& .header__logo path {
+			fill: #363636;
+		}
+		& .search svg path {
+			fill: #363636;
+		}
+	}
 	&__content {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding-bottom: 20px;
+		padding-bottom: 30px;
 		position: relative;
 		&::before {
 			content: "";
@@ -1160,12 +1170,12 @@ p:not(:first-of-type) {
 			bottom: 0;
 			width: 100%;
 			background: rgb(198 194 194);
-			z-index: 10;
+			z-index: 101;
 			opacity: 0;
 			transition: opacity 0.3s ease 0s;
 		}
 		@media screen and (max-width: 480px) {
-			padding-bottom: 10px;
+			padding-bottom: 20px;
 		}
 	}
 	&__logo {
@@ -1792,12 +1802,12 @@ section {
 // specials
 
 .specials {
-	padding: 150px 0 120px;
+	padding: 150px 0 200px;
 	@media screen and (max-width: 1024px) {
-		padding: 97px 0 125px;
+		padding: 97px 0 225px;
 	}
 	@media screen and (max-width: 480px) {
-		padding: 50px 0 60px;
+		padding: 50px 0 100px;
 	}
 	&__headline {
 		text-align: left;
@@ -1866,7 +1876,7 @@ section {
 		@media screen and (max-width: 1024px) {
 			flex-direction: column;
 			padding-top: 35px;
-			border-top: 1px solid #bdbdbd;
+			border-top: 1px solid #d2d2d2;
 		}
 		@media screen and (max-width: 480px) {
 			padding-top: 20px;
@@ -1918,12 +1928,32 @@ section {
 	}
 
 	&_about {
+		& .specials__item-right {
+			@media screen and (min-width: 1025px) {
+				font-size: 16px;
+			}
+		}
+		& .specials__item {
+			&:nth-child(2) {
+				@media screen and (min-width: 1025px) {
+					margin-bottom: 80px;
+				}
+			}
+		}
 		& .specials__sticky {
 			& p {
 				max-width: 500px;
 				@media screen and (max-width: 1024px) {
 					max-width: unset;
 				}
+			}
+		}
+	}
+
+	&_main {
+		& .specials__item-right {
+			@media screen and (min-width: 1025px) {
+				font-size: 16px;
 			}
 		}
 	}
@@ -1937,10 +1967,12 @@ section {
 				display: inline-block;
 				@media screen and (max-width: 1024px) {
 					font-size: 22px;
+					line-height: 170%;
 				}
 				@media screen and (max-width: 480px) {
 					font-size: 16px;
 					margin-bottom: 20px;
+					line-height: 135%;
 				}
 			}
 			& ul {
@@ -1949,10 +1981,12 @@ section {
 					padding-left: 33px;
 					@media screen and (max-width: 1024px) {
 						font-size: 22px;
+						line-height: 170%;
 					}
 					@media screen and (max-width: 480px) {
 						font-size: 16px;
 						padding-left: 25px;
+						line-height: 135%;
 					}
 					& span {
 						position: relative;
@@ -2053,7 +2087,7 @@ section {
 		@media screen and (max-width: 1024px) {
 			padding: 40px 0 0 0;
 			flex: 1 1 100%;
-			border-top: 1px solid #bdbdbd;
+			border-top: 1px solid #d2d2d2;
 			margin-bottom: 55px;
 		}
 		@media screen and (max-width: 480px) {
@@ -2089,7 +2123,7 @@ section {
 		& .section-header {
 			flex-wrap: wrap;
 			padding: 70px 0 30px;
-			border-bottom: 1px solid #bdbdbd;
+			border-bottom: 1px solid #d2d2d2;
 			margin-bottom: 60px;
 			@media screen and (max-width: 1024px) {
 				margin: 0;
@@ -2120,10 +2154,59 @@ section {
 		& .items__pagination-wrap {
 			@media screen and (max-width: 1024px) {
 				padding-top: 67px;
-				border-top: 1px solid #bdbdbd;
+				border-top: 1px solid #d2d2d2;
 			}
 			@media screen and (max-width: 480px) {
 				padding-top: 30px;
+			}
+		}
+		& .item__more {
+			@media screen and (min-width: 1251px) {
+				max-width: 275px;
+				width: 100%;
+			}
+		}
+		& .items__item-wrap {
+			@media screen and (min-width: 1251px) {
+				flex: 1 1 33.3333%;
+			}
+		}
+		& .item__hover {
+			@media screen and (min-width: 1251px) {
+				padding: 30px;
+			}
+		}
+		& .item__hover-top {
+			@media screen and (min-width: 1251px) {
+				margin-bottom: 5px;
+			}
+			& span {
+				@media screen and (min-width: 1251px) {
+					font-size: 100px;
+				}
+			}
+		}
+		& .item__hover-name {
+			@media screen and (min-width: 1251px) {
+				margin-bottom: 20px;
+			}
+			& span {
+				@media screen and (min-width: 1251px) {
+					font-size: 14px;
+				}
+				&:first-child {
+					font-weight: 500;
+					@media screen and (min-width: 1251px) {
+						font-size: 24px;
+						margin-bottom: 15px;
+					}
+				}
+			}
+		}
+		& .item__hover-type {
+			@media screen and (min-width: 1251px) {
+				font-size: 12px;
+				margin: 0 0 15px 45px;
 			}
 		}
 	}
@@ -2277,12 +2360,12 @@ section {
 }
 
 .benefits {
-	padding-bottom: 110px;
+	padding-bottom: 200px;
 	@media screen and (max-width: 1024px) {
-		padding-bottom: 85px;
+		padding-bottom: 200px;
 	}
 	@media screen and (max-width: 480px) {
-		padding-bottom: 50px;
+		padding-bottom: 100px;
 	}
 	&__headline {
 		margin-bottom: 50px;
@@ -2324,10 +2407,10 @@ section {
 
 	&__play {
 		flex: 0 0 60px;
-		margin-right: 12px;
+		margin-left: 12px;
 		@media screen and (max-width: 480px) {
 			flex: 0 0 50px;
-			margin-right: 8px;
+			margin-left: 8px;
 		}
 	}
 
@@ -2394,6 +2477,7 @@ section {
 	&__btn {
 		display: flex;
 		align-items: center;
+		flex-direction: row-reverse;
 		&:hover .benefits__play:after {
 			transform: translateY(0%);
 		}
@@ -2401,7 +2485,7 @@ section {
 			opacity: 0.8;
 		}
 		& span {
-			font-size: 12px;
+			font-size: 18px;
 			line-height: 133%;
 			font-feature-settings: "pnum" on, "lnum" on;
 			color: #292929;
@@ -2424,9 +2508,7 @@ section {
 	position: relative;
 	transition: transform 0.3s ease 0s;
 	overflow: hidden;
-
 	object-fit: contain;
-
 	@media screen and (max-width: 480px) {
 		width: 50px;
 		height: 50px;
@@ -2438,7 +2520,7 @@ section {
 		width: 20px;
 		height: 20px;
 		position: absolute;
-		left: 50%;
+		left: 53%;
 		top: 50%;
 		transform: translate(-50%, -50%);
 		z-index: 2;
@@ -2481,7 +2563,8 @@ section {
 	@media screen and (max-width: 1024px) {
 		padding-bottom: 93%;
 	}
-	& img {
+	& img,
+	video {
 		position: absolute;
 		width: 100%;
 		height: 100%;
@@ -2603,6 +2686,7 @@ section {
 				max-width: 709px;
 				@media screen and (max-width: 1024px) {
 					font-size: 32px;
+					line-height: 170%;
 				}
 				@media screen and (max-width: 540px) {
 					font-size: 28px;
@@ -2620,14 +2704,15 @@ section {
 
 	&_industrial {
 		position: static;
-		padding: 150px 0;
+		padding: 200px 0 200px;
 		@media screen and (max-width: 1024px) {
-			padding: 100px 0;
+			padding: 200px 0;
 		}
 		@media screen and (max-width: 480px) {
-			padding: 50px 0;
+			padding: 100px 0 100px;
 		}
 		& .team__btn {
+			z-index: 2;
 			cursor: pointer;
 			& span {
 				display: none;
@@ -2649,6 +2734,7 @@ section {
 			}
 		}
 		& .team__content {
+			z-index: 1;
 			width: 100%;
 			margin: 0;
 			position: absolute;
@@ -2725,12 +2811,12 @@ section {
 // clients
 
 .clients {
-	padding: 150px 0;
+	padding: 200px 0;
 	@media screen and (max-width: 1024px) {
-		padding: 100px 0;
+		padding: 200px 0;
 	}
 	@media screen and (max-width: 480px) {
-		padding: 50px 0;
+		padding: 100px 0;
 	}
 	&__headline {
 		margin-bottom: 65px;
@@ -2748,12 +2834,12 @@ section {
 	}
 
 	&_partners {
-		padding: 0 0 150px 0;
+		padding: 0 0 200px 0;
 		@media screen and (max-width: 1024px) {
-			padding: 0 0 100px 0;
+			padding: 0 0 200px 0;
 		}
 		@media screen and (max-width: 480px) {
-			padding: 0 0 50px 0;
+			padding: 0 0 100px 0;
 		}
 		& .clients-item {
 			& span {
@@ -2827,6 +2913,7 @@ section {
 				max-width: unset;
 				margin-bottom: 60px;
 				font-size: 22px;
+				line-height: 170%;
 			}
 			@media screen and (max-width: 480px) {
 				margin-bottom: 30px;
@@ -2837,12 +2924,12 @@ section {
 	}
 
 	&_living {
-		padding-bottom: 150px;
+		padding-bottom: 200px;
 		@media screen and (max-width: 1024px) {
-			padding-bottom: 100px;
+			padding-bottom: 200px;
 		}
 		@media screen and (max-width: 480px) {
-			padding-bottom: 50px;
+			padding-bottom: 100px;
 		}
 		& .clients__text {
 			margin-bottom: 70px;
@@ -2857,7 +2944,8 @@ section {
 }
 
 .clients-item {
-	border: 1px solid #bdbdbd;
+	box-shadow: 1px 0 0 0 #bdbdbd, 0 1px 0 0 #bdbdbd, 1px 1px 0 0 #bdbdbd, 1px 0 0 0 #bdbdbd inset,
+		0 1px 0 0 #bdbdbd inset;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -2903,12 +2991,12 @@ section {
 // news
 
 .news {
-	padding-bottom: 150px;
+	padding-bottom: 200px;
 	@media screen and (max-width: 1024px) {
-		padding-bottom: 100px;
+		padding-bottom: 200px;
 	}
 	@media screen and (max-width: 480px) {
-		padding-bottom: 70px;
+		padding-bottom: 100px;
 	}
 	&__section-header {
 		margin-bottom: 75px;
@@ -2942,6 +3030,7 @@ section {
 	}
 
 	&__wrapper {
+		transition-timing-function: linear !important;
 	}
 
 	&__slide {
@@ -2950,7 +3039,10 @@ section {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		height: auto !important;
+		min-height: 400px !important;
+		@media screen and (max-width: 480px) {
+			min-height: 300px !important;
+		}
 		&:hover .slider__name {
 			opacity: 0.8;
 		}
@@ -2961,9 +3053,8 @@ section {
 	}
 
 	&__name {
-		max-width: 430px;
 		font-weight: 500;
-		font-size: 30px;
+		font-size: 24px;
 		line-height: 125%;
 		font-feature-settings: "pnum" on, "lnum" on;
 		margin-bottom: 57.5px;
@@ -2971,9 +3062,6 @@ section {
 		transition: opacity 0.3s ease 0s;
 		@media screen and (max-width: 1024px) {
 			margin-bottom: 30px;
-		}
-		@media screen and (max-width: 540px) {
-			font-size: 28px;
 		}
 		@media screen and (max-width: 480px) {
 			font-size: 18px;
@@ -3173,12 +3261,12 @@ section {
 	}
 
 	&_industrial {
-		padding-top: 155px;
+		padding-top: 200px;
 		@media screen and (max-width: 1024px) {
-			padding-top: 85px;
+			padding-top: 200px;
 		}
 		@media screen and (max-width: 480px) {
-			padding-top: 50px;
+			padding-top: 100px;
 		}
 	}
 }
@@ -3273,10 +3361,13 @@ section {
 			transition: opacity 0.3s ease 0s;
 			white-space: nowrap;
 			@media screen and (max-width: 1024px) {
+				font-size: 56px;
+			}
+			@media screen and (max-width: 560px) {
 				font-size: 48px;
 			}
 			@media screen and (max-width: 480px) {
-				font-size: 22px;
+				font-size: 28px;
 			}
 			&:hover {
 				opacity: 0.8;
@@ -3348,6 +3439,18 @@ section {
 		line-height: 133%;
 		font-feature-settings: "pnum" on, "lnum" on;
 		color: #959595;
+		& > span {
+			font-size: 13px;
+			@media screen and (min-width: 1600px) {
+				font-size: 15px;
+			}
+			@media screen and (max-width: 1024px) {
+				font-size: 17px;
+			}
+			@media screen and (max-width: 480px) {
+				font-size: 13px;
+			}
+		}
 		@media screen and (min-width: 1600px) {
 			font-size: 14px;
 		}
@@ -3379,9 +3482,18 @@ section {
 				opacity: 0.8;
 			}
 		}
+		& br {
+			display: none;
+			@media screen and (max-width: 1024px) {
+				display: block;
+			}
+		}
 	}
 
 	&__right {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 	}
 
 	&__menu {
@@ -3402,30 +3514,19 @@ section {
 			order: -1;
 			display: flex;
 			flex-direction: column;
-			margin-bottom: 80px;
+			margin-bottom: 120px;
 		}
 		@media screen and (max-width: 480px) {
-			margin-bottom: 30px;
+			margin-bottom: 70px;
 		}
 		& .footer__list {
 			&:first-child {
-				margin-bottom: 25px;
+				margin-bottom: 50px;
 				@media screen and (max-width: 1024px) {
-					margin-bottom: 40px;
+					margin-bottom: 70px;
 				}
 				@media screen and (max-width: 480px) {
-					margin-bottom: 10px;
-				}
-			}
-			&:last-child {
-				& .footer__headline {
-					margin-bottom: 5px !important;
-					@media screen and (max-width: 1024px) {
-						margin-bottom: 15px !important;
-					}
-					@media screen and (max-width: 480px) {
-						margin-bottom: 10px !important;
-					}
+					margin-bottom: 40px;
 				}
 			}
 			& .footer__headline {
@@ -3454,22 +3555,22 @@ section {
 				margin: 0 50px 40px 0;
 			}
 			@media screen and (max-width: 480px) {
-				margin: 0 50px 20px 0;
+				margin: 0 50px 60px 0;
 			}
 		}
 		& li {
-			font-size: 12px;
-			line-height: 130%;
+			font-size: 13px;
+			line-height: 150%;
 			font-feature-settings: "pnum" on, "lnum" on;
 			color: #ffffff;
 			@media screen and (min-width: 1600px) {
-				font-size: 14px;
+				font-size: 15px;
 			}
 			@media screen and (max-width: 1024px) {
-				font-size: 22px;
+				font-size: 23px;
 			}
 			@media screen and (max-width: 480px) {
-				font-size: 14px;
+				font-size: 15px;
 			}
 			&:not(:last-child) {
 				margin-bottom: 20px;
@@ -3509,19 +3610,19 @@ section {
 	}
 
 	&__link {
-		font-size: 12px;
-		line-height: 130%;
+		font-size: 13px;
+		line-height: 150%;
 		font-feature-settings: "pnum" on, "lnum" on;
 		color: #ffffff;
 		transition: opacity 0.3s ease 0s;
 		@media screen and (min-width: 1600px) {
-			font-size: 14px;
+			font-size: 15px;
 		}
 		@media screen and (max-width: 1024px) {
-			font-size: 22px;
+			font-size: 23px;
 		}
 		@media screen and (max-width: 480px) {
-			font-size: 14px;
+			font-size: 15px;
 		}
 		&:hover {
 			opacity: 0.8;
@@ -3639,11 +3740,6 @@ section {
 		}
 		&:hover {
 			opacity: 0.5;
-			// border: 1px solid #fff;
-			// & span {
-			// 	color: #fff;
-			// 	border-bottom: 1px solid #fff;
-			// }
 		}
 	}
 }
@@ -3745,7 +3841,7 @@ section {
 	& a {
 		display: inline-block;
 		font-weight: 500;
-		font-size: 12px;
+		font-size: 18px;
 		line-height: 150%;
 		font-feature-settings: "pnum" on, "lnum" on;
 		color: #363636;
@@ -3879,6 +3975,9 @@ section {
 
 	&__points {
 		display: flex;
+		@media screen and (min-width: 1025px) {
+			max-width: 60%;
+		}
 		@media screen and (max-width: 1024px) {
 			flex-direction: column;
 		}
@@ -3895,6 +3994,10 @@ section {
 		font-size: 16px;
 		line-height: 150%;
 		color: #ffffff;
+		@media screen and (min-width: 1025px) {
+			flex: 1 0 33.3333%;
+			white-space: nowrap;
+		}
 		& span {
 			padding: 0;
 			margin: 0;
@@ -3928,6 +4031,10 @@ section {
 			margin-bottom: 5px;
 			@media screen and (max-width: 1024px) {
 				margin: 0 25px 0 0;
+				width: 22px !important;
+				display: flex;
+				justify-content: center;
+				align-items: center;
 			}
 			@media screen and (max-width: 480px) {
 				margin: 0 15px 0 0;
@@ -3942,6 +4049,9 @@ section {
 
 		&_phone {
 			& div {
+				@media screen and (min-width: 1025px) {
+					padding-left: 2px;
+				}
 				width: 13px;
 				height: 21px;
 			}
@@ -3957,12 +4067,12 @@ section {
 }
 
 .services {
-	padding: 150px 0 85px;
+	padding: 200px 0 150px;
 	@media screen and (max-width: 1024px) {
-		padding: 100px 0 45px;
+		padding: 200px 0 45px;
 	}
 	@media screen and (max-width: 480px) {
-		padding: 60px 0 20px;
+		padding: 100px 0 50px;
 	}
 	&__headline {
 		margin-bottom: 55px;
@@ -3991,6 +4101,7 @@ section {
 			margin: 0 0 45px 0;
 			font-size: 22px;
 			padding-right: 0;
+			line-height: 170%;
 		}
 		@media screen and (max-width: 480px) {
 			margin-bottom: 35px;
@@ -4026,7 +4137,16 @@ section {
 	&__point {
 	}
 
+	&_audit {
+		@media screen and (max-width: 480px) {
+			padding-bottom: 100px;
+		}
+	}
+
 	&_career {
+		@media screen and (max-width: 480px) {
+			padding: 100px 0 100px;
+		}
 		& .services__right {
 			margin: 0 -15px;
 		}
@@ -4155,7 +4275,7 @@ section {
 		}
 		@media screen and (max-width: 480px) {
 			font-size: 20px;
-			margin-bottom: 20px;
+			margin-bottom: 30px;
 		}
 	}
 
@@ -4250,6 +4370,7 @@ section {
 			@media screen and (max-width: 1024px) {
 				font-size: 22px;
 				margin-bottom: 100px;
+				line-height: 170%;
 			}
 			@media screen and (max-width: 480px) {
 				margin-bottom: 50px;
@@ -4265,12 +4386,12 @@ section {
 	}
 
 	&_digital {
-		padding-bottom: 145px;
+		padding-bottom: 195px;
 		@media screen and (max-width: 1024px) {
-			padding-bottom: 120px;
+			padding-bottom: 200px;
 		}
 		@media screen and (max-width: 480px) {
-			padding-bottom: 60px;
+			padding-bottom: 100px;
 		}
 		& .watch__left {
 			margin-right: 40px;
@@ -4327,12 +4448,12 @@ section {
 	}
 
 	&_industrial {
-		padding: 150px 0;
+		padding: 200px 0;
 		@media screen and (max-width: 1024px) {
-			padding: 85px 0 100px;
+			padding: 185px 0 200px;
 		}
 		@media screen and (max-width: 480px) {
-			padding: 40px 0 50px;
+			padding: 100px 0 100px;
 		}
 		& .watch__content {
 			@media screen and (max-width: 1024px) {
@@ -4452,12 +4573,12 @@ section {
 	}
 
 	&_commercial {
-		padding: 150px 0;
+		padding: 150px 0 200px;
 		@media screen and (max-width: 1024px) {
-			padding: 100px 0;
+			padding: 100px 0 200px;
 		}
 		@media screen and (max-width: 480px) {
-			padding: 50px 0;
+			padding: 50px 0 100px;
 		}
 		& .watch__content {
 			@media screen and (max-width: 1024px) {
@@ -4515,6 +4636,16 @@ section {
 		}
 	}
 
+	&_commercial2 {
+		padding: 0px 0 200px;
+		@media screen and (max-width: 1024px) {
+			padding: 100px 0 200px;
+		}
+		@media screen and (max-width: 480px) {
+			padding: 50px 0 100px;
+		}
+	}
+
 	&_living {
 		padding-top: 0;
 	}
@@ -4539,6 +4670,7 @@ section {
 			@media screen and (max-width: 1024px) {
 				margin: 50px 0 0px 0;
 				font-size: 22px;
+				line-height: 170%;
 			}
 			@media screen and (max-width: 480px) {
 				font-size: 16px;
@@ -4664,12 +4796,12 @@ section {
 }
 
 .industries {
-	padding: 150px 0;
+	padding: 200px 0;
 	@media screen and (max-width: 1024px) {
-		padding: 100px 0;
+		padding: 200px 0;
 	}
 	@media screen and (max-width: 480px) {
-		padding: 50px 0;
+		padding: 100px 0;
 	}
 	&__content {
 		display: flex;
@@ -4699,6 +4831,7 @@ section {
 		@media screen and (max-width: 1024px) {
 			margin: 0 0 65px 0;
 			font-size: 22px;
+			line-height: 170%;
 			& p {
 				max-width: unset;
 			}
@@ -4770,7 +4903,7 @@ section {
 		}
 		@media screen and (max-width: 480px) {
 			height: auto;
-			padding: 14px 0;
+			padding: 20px 0;
 			& a {
 				font-size: 16px;
 			}
@@ -4783,11 +4916,19 @@ section {
 				position: relative;
 				& svg {
 					transition: all 0.3s ease 0s;
+					&:last-child {
+						opacity: 0;
+					}
 				}
 			}
 			&._active {
-				& > a svg:first-of-type {
-					opacity: 0;
+				& > a svg {
+					&:first-of-type {
+						opacity: 0;
+					}
+					&:last-child {
+						opacity: 1;
+					}
 				}
 				& .accordion-block {
 					display: flex;
@@ -4798,10 +4939,10 @@ section {
 
 	&_career {
 		@media screen and (max-width: 1024px) {
-			padding: 80px 0 120px;
+			padding: 80px 0 200px;
 		}
 		@media screen and (max-width: 480px) {
-			padding: 50px 0 70px;
+			padding: 50px 0 100px;
 		}
 		& .industries__title {
 			font-weight: 500;
@@ -4849,7 +4990,11 @@ section {
 				}
 			}
 		}
-
+		& .industries__item {
+			&:nth-child(2) {
+				border-top: 1px solid #bdbdbd;
+			}
+		}
 		& .industries__item a {
 			@media screen and (max-width: 480px) {
 				font-size: 18px;
@@ -4866,7 +5011,7 @@ section {
 			padding: 28.5px 0;
 			height: auto;
 			@media screen and (max-width: 480px) {
-				padding: 15px 0;
+				padding: 20px 0;
 			}
 			& > a {
 				font-size: 28px;
@@ -4921,12 +5066,12 @@ section {
 	}
 
 	&_cost {
-		padding: 0 0 150px 0;
+		padding: 0 0 200px 0;
 		@media screen and (max-width: 1024px) {
-			padding: 0 0 100px 0;
+			padding: 0 0 200px 0;
 		}
 		@media screen and (max-width: 480px) {
-			padding: 0 0 50px 0;
+			padding: 0 0 100px 0;
 		}
 		& .industries__headline {
 			display: block;
@@ -5045,12 +5190,12 @@ section {
 }
 
 .society {
-	padding-bottom: 150px;
+	padding-bottom: 200px;
 	@media screen and (max-width: 1024px) {
-		padding-bottom: 100px;
+		padding-bottom: 200px;
 	}
 	@media screen and (max-width: 480px) {
-		padding-bottom: 50px;
+		padding-bottom: 100px;
 	}
 	&__headline {
 		margin-bottom: 55px;
@@ -5078,6 +5223,7 @@ section {
 			margin: 0 0 70px 0;
 			font-size: 22px;
 			padding-right: 0;
+			line-height: 170%;
 		}
 		@media screen and (max-width: 480px) {
 			font-size: 16px;
@@ -5091,10 +5237,16 @@ section {
 	}
 
 	&__clients-item {
+		box-shadow: none;
+		border: 1px solid #bdbdbd;
 		border-left: none;
 		border-right: none;
+		border-bottom: none;
 		justify-content: flex-start;
 		padding: 21px 0;
+		&:last-child {
+			border-bottom: 1px solid #bdbdbd;
+		}
 		@media screen and (max-width: 1024px) {
 			padding: 55px 20px 60px 50px;
 		}
@@ -5155,12 +5307,12 @@ section {
 	}
 
 	&_license {
-		padding: 170px 0 220px;
+		padding: 200px 0 220px;
 		@media screen and (max-width: 1024px) {
-			padding: 100px 0 150px;
+			padding: 200px 0 150px;
 		}
 		@media screen and (max-width: 480px) {
-			padding: 50px 0px 70px;
+			padding: 100px 0px 70px;
 		}
 		& .society__content {
 			flex-direction: column;
@@ -5178,7 +5330,6 @@ section {
 			padding: 28px 0;
 			display: flex;
 			justify-content: space-between;
-			border-bottom: 1px solid #bdbdbd;
 			align-items: center;
 			&:first-child {
 				border-top: 1px solid #bdbdbd;
@@ -5201,19 +5352,24 @@ section {
 				& > span {
 					font-size: 16px;
 					margin-right: 15px;
-					line-height: 135%;
 				}
+			}
+		}
+
+		& .society__right {
+			@media screen and (min-width: 1025px) {
+				padding-top: 80px;
 			}
 		}
 	}
 
 	&_partners {
-		padding: 150px 0 150px;
+		padding: 150px 0 200px;
 		@media screen and (max-width: 1024px) {
-			padding: 100px 0 100px;
+			padding: 100px 0 200px;
 		}
 		@media screen and (max-width: 480px) {
-			padding: 50px 0 50px;
+			padding: 50px 0 100px;
 		}
 		& .society__left {
 			@media screen and (max-width: 1024px) {
@@ -5309,10 +5465,10 @@ section {
 .animation {
 	padding: 200px 0 240px;
 	@media screen and (max-width: 1024px) {
-		padding: 100px 0 100px;
+		padding: 200px 0 200px;
 	}
 	@media screen and (max-width: 480px) {
-		padding: 60px 0 90px;
+		padding: 100px 0 150px;
 	}
 	&__content {
 		display: flex;
@@ -5363,6 +5519,7 @@ section {
 		line-height: 150%;
 		@media screen and (max-width: 1024px) {
 			font-size: 22px;
+			line-height: 170%;
 		}
 		@media screen and (max-width: 480px) {
 			font-size: 16px;
@@ -5375,8 +5532,12 @@ section {
 		font-size: 30px;
 		line-height: 120%;
 		width: 100%;
-		display: inline-block;
 		margin-bottom: 40px;
+		display: flex;
+		align-items: center;
+		& img {
+			margin-right: 15px;
+		}
 		@media screen and (max-width: 1024px) {
 			margin-bottom: 30px;
 		}
@@ -5519,10 +5680,10 @@ section {
 		padding-top: 0;
 		padding-bottom: 310px;
 		@media screen and (max-width: 1024px) {
-			padding-bottom: 100px;
+			padding-bottom: 200px;
 		}
 		@media screen and (max-width: 480px) {
-			padding-bottom: 60px;
+			padding-bottom: 100px;
 		}
 		& .animation__right {
 			& span {
@@ -5537,10 +5698,12 @@ section {
 				margin-top: 30px;
 				@media screen and (max-width: 1024px) {
 					font-size: 22px;
+					line-height: 170%;
 				}
 				@media screen and (max-width: 480px) {
 					margin-top: 20px;
 					font-size: 16px;
+					line-height: 135%;
 				}
 			}
 		}
@@ -5550,10 +5713,10 @@ section {
 		padding-top: 0;
 		padding-bottom: 310px;
 		@media screen and (max-width: 1024px) {
-			padding-bottom: 100px;
+			padding-bottom: 200px;
 		}
 		@media screen and (max-width: 480px) {
-			padding-bottom: 70px;
+			padding-bottom: 100px;
 		}
 		& .animation__title {
 			margin-bottom: 30px;
@@ -5708,12 +5871,12 @@ section {
 }
 
 .reviews {
-	padding-bottom: 150px;
+	padding-bottom: 200px;
 	@media screen and (max-width: 1024px) {
-		padding-bottom: 100px;
+		padding-bottom: 200px;
 	}
 	@media screen and (max-width: 480px) {
-		padding-bottom: 50px;
+		padding-bottom: 100px;
 	}
 	&__section-header {
 		margin-bottom: 65px;
@@ -5771,6 +5934,7 @@ section {
 			@media screen and (max-width: 1024px) {
 				font-size: 22px;
 				margin-bottom: 25px;
+				line-height: 170%;
 			}
 			@media screen and (max-width: 480px) {
 				margin-bottom: 15px;
@@ -5835,7 +5999,9 @@ section {
 		& .person__body {
 			& span {
 				&:first-child {
-					font-size: 14px;
+					font-size: 18px;
+					font-weight: 500;
+					color: #363636;
 					margin: 0 0 5px 0;
 					@media screen and (max-width: 1024px) {
 						font-size: 20px;
@@ -5893,7 +6059,6 @@ section {
 			@media screen and (max-width: 480px) {
 				padding: 15px 0;
 				font-size: 16px;
-				line-height: 135%;
 			}
 			&:last-child {
 				border-bottom: 1px solid #bdbdbd;
@@ -5918,7 +6083,7 @@ section {
 				}
 			}
 			& span {
-				font-weight: 500;
+				font-weight: 400;
 				font-size: 14px;
 				line-height: 114%;
 				font-feature-settings: "pnum" on, "lnum" on;
@@ -5962,14 +6127,6 @@ section {
 			}
 			@media screen and (max-width: 480px) {
 				margin-bottom: 30px;
-			}
-		}
-	}
-
-	&_digital {
-		& .reviews__left {
-			@media screen and (min-width: 1025px) {
-				margin-top: 85px !important;
 			}
 		}
 	}
@@ -6026,18 +6183,21 @@ section {
 			}
 		}
 		& .reviews__h3 {
+			& span {
+				font-weight: 400;
+			}
 			& h3 {
-				margin-bottom: 32px;
+				margin: 20px 0 30px;
 				font-size: 28px;
 				@media screen and (max-width: 1024px) {
-					margin-bottom: 46px;
+					margin: 30px 0 45px;
 					& span {
 						font-size: 14px;
 					}
 				}
 				@media screen and (max-width: 480px) {
 					font-size: 22px;
-					margin-bottom: 23px;
+					margin: 10px 0 20px;
 				}
 			}
 		}
@@ -6056,7 +6216,7 @@ section {
 		}
 		& .reviews__item {
 			&:not(:last-child) {
-				margin-bottom: 30px;
+				margin-bottom: 60px;
 				@media screen and (max-width: 1024px) {
 					margin-bottom: 80px;
 				}
@@ -6091,10 +6251,10 @@ section {
 	&_epc {
 		padding: 150px 0 245px;
 		@media screen and (max-width: 1024px) {
-			padding: 95px 0 100px;
+			padding: 95px 0 200px;
 		}
 		@media screen and (max-width: 480px) {
-			padding: 50px 0;
+			padding: 50px 0 100px;
 		}
 		& .reviews__section-header {
 			@media screen and (max-width: 1024px) {
@@ -6138,6 +6298,7 @@ section {
 			& p {
 				@media screen and (max-width: 1024px) {
 					font-size: 22px;
+					line-height: 170%;
 				}
 				@media screen and (max-width: 480px) {
 					font-size: 16px;
@@ -6164,12 +6325,12 @@ section {
 	}
 
 	&_tender {
-		padding-bottom: 140px;
+		padding-bottom: 200px;
 		@media screen and (max-width: 1024px) {
-			padding-bottom: 100px;
+			padding-bottom: 200px;
 		}
 		@media screen and (max-width: 480px) {
-			padding-bottom: 60px;
+			padding-bottom: 100px;
 		}
 		& .reviews__h3 {
 			& h3 {
@@ -6186,25 +6347,26 @@ section {
 	}
 
 	&_building {
-		padding: 150px 0;
+		padding: 150px 0 200px;
 		@media screen and (max-width: 1024px) {
-			padding: 100px 0;
+			padding: 100px 0 200px;
 		}
 		@media screen and (max-width: 480px) {
-			padding: 50px 0;
+			padding: 50px 0 100px;
 		}
 	}
 
 	&_mounting {
-		padding: 150px 0;
+		padding: 150px 0 0;
 		@media screen and (max-width: 1024px) {
-			padding: 100px 0;
+			padding: 200px 0 0;
 		}
 		@media screen and (max-width: 480px) {
-			padding: 50px 0;
+			padding: 100px 0 0;
 		}
 		& ul {
 			& li {
+				display: flex;
 				line-height: 150%;
 				&:not(:first-child) {
 					margin-top: 22px;
@@ -6283,12 +6445,12 @@ section {
 	}
 
 	&_cost2 {
-		padding: 150px 0;
+		padding: 200px 0;
 		@media screen and (max-width: 1024px) {
-			padding: 100px 0;
+			padding: 100px 0 200px;
 		}
 		@media screen and (max-width: 480px) {
-			padding: 50px 0;
+			padding: 50px 0 100px;
 		}
 	}
 
@@ -6296,6 +6458,36 @@ section {
 		& .reviews__left {
 			@media screen and (min-width: 1025px) {
 				margin-top: 67px;
+			}
+		}
+	}
+
+	&_digital {
+		padding: 0px 0 200px;
+		@media screen and (max-width: 1024px) {
+			padding: 0px 0 200px;
+		}
+		@media screen and (max-width: 480px) {
+			padding: 0px 0 100px;
+		}
+		& .reviews__left {
+			@media screen and (min-width: 1025px) {
+				margin-top: 85px !important;
+			}
+		}
+	}
+
+	&_digital2 {
+		padding: 150px 0 200px;
+		@media screen and (max-width: 1024px) {
+			padding: 100px 0 100px;
+		}
+		@media screen and (max-width: 480px) {
+			padding: 50px 0 50px;
+		}
+		& .reviews__left {
+			@media screen and (min-width: 1025px) {
+				margin-top: 85px !important;
 			}
 		}
 	}
@@ -6446,7 +6638,24 @@ section {
 			max-width: 700px;
 		}
 		& .building__item {
-			margin-bottom: 70px;
+			&:first-child {
+				margin-bottom: 70px;
+				@media screen and (max-width: 1024px) {
+					margin-bottom: 60px;
+				}
+				@media screen and (max-width: 480px) {
+					margin-bottom: 30px;
+				}
+			}
+			&:nth-child(2) {
+				margin-bottom: 70px;
+				@media screen and (max-width: 1024px) {
+					margin-bottom: 60px;
+				}
+				@media screen and (max-width: 480px) {
+					margin-bottom: 30px;
+				}
+			}
 			@media screen and (max-width: 1024px) {
 				margin-bottom: 60px;
 			}
@@ -6472,6 +6681,7 @@ section {
 		line-height: 150%;
 		@media screen and (max-width: 1024px) {
 			font-size: 22px;
+			line-height: 170%;
 		}
 		@media screen and (max-width: 480px) {
 			font-size: 16px;
@@ -6510,16 +6720,22 @@ section {
 }
 
 .slider2 {
-	padding: 100px 0 160px;
+	padding: 150px 0 200px;
 	@media screen and (max-width: 1024px) {
-		padding: 100px 0 110px;
+		padding: 200px 0 200px;
 	}
 	@media screen and (max-width: 480px) {
-		padding: 50px 0 60px;
+		padding: 100px 0 100px;
 	}
 	&__container {
 		overflow: hidden;
 		position: relative;
+		&:hover .swiper-button-next {
+			opacity: 1;
+		}
+		&:hover .swiper-button-prev {
+			opacity: 1;
+		}
 	}
 
 	&__wrapper {
@@ -6534,10 +6750,13 @@ section {
 
 	& .swiper-button-prev,
 	& .swiper-button-next {
+		@media screen and (min-width: 1025px) {
+			opacity: 0;
+		}
 		width: 60px;
 		height: 60px;
 		background: #fc0d1b;
-		transition: background 0.3s ease 0s;
+		transition: all 0.3s ease 0s;
 		@media screen and (max-width: 1024px) {
 			width: 40px;
 			height: 40px;
@@ -6557,15 +6776,20 @@ section {
 	& .swiper-button-next {
 		right: 0;
 	}
+
+	& .swiper-button-disabled {
+		opacity: 0;
+		visibility: hidden;
+	}
 }
 
 .photo {
 	padding-top: 160px;
 	@media screen and (max-width: 1024px) {
-		padding-top: 80px;
+		padding-top: 200px;
 	}
 	@media screen and (max-width: 480px) {
-		padding-top: 40px;
+		padding-top: 100px;
 	}
 	& * {
 		width: 100%;
@@ -6573,12 +6797,12 @@ section {
 }
 
 .projects {
-	padding: 150px 0;
+	padding: 200px 0;
 	@media screen and (max-width: 1024px) {
-		padding: 85px 0 95px;
+		padding: 200px 0 200px;
 	}
 	@media screen and (max-width: 480px) {
-		padding: 70px 0 50px;
+		padding: 100px 0 100px;
 	}
 	&__section-header {
 		margin-bottom: 70px;
@@ -6616,12 +6840,12 @@ section {
 }
 
 .mosaic {
-	padding-bottom: 150px;
+	padding-bottom: 200px;
 	@media screen and (max-width: 1024px) {
-		padding-bottom: 100px;
+		padding-bottom: 200px;
 	}
 	@media screen and (max-width: 480px) {
-		padding-bottom: 50px;
+		padding-bottom: 100px;
 	}
 	&__section-header {
 		margin-bottom: 93px;
@@ -6791,12 +7015,12 @@ section {
 }
 
 .why {
-	padding: 150px 0 120px;
+	padding: 200px 0 200px;
 	@media screen and (max-width: 1024px) {
-		padding: 95px 0;
+		padding: 150px 0 200px;
 	}
 	@media screen and (max-width: 480px) {
-		padding: 50px 0;
+		padding: 50px 0 100px;
 	}
 	&__section-header {
 		margin-bottom: 63px;
@@ -6822,6 +7046,7 @@ section {
 		@media screen and (max-width: 1024px) {
 			padding-right: 0;
 			font-size: 22px;
+			line-height: 170%;
 		}
 		@media screen and (max-width: 480px) {
 			font-size: 16px;
@@ -6961,6 +7186,7 @@ section {
 			line-height: 150%;
 			@media screen and (max-width: 1024px) {
 				font-size: 22px;
+				line-height: 170%;
 			}
 			@media screen and (max-width: 480px) {
 				font-size: 16px;
@@ -7027,6 +7253,7 @@ section {
 			line-height: 150%;
 			@media screen and (max-width: 1024px) {
 				font-size: 22px;
+				line-height: 170%;
 			}
 			@media screen and (max-width: 480px) {
 				font-size: 16px;
@@ -7056,12 +7283,12 @@ section {
 }
 
 .tasks {
-	padding-bottom: 150px;
+	padding-bottom: 200px;
 	@media screen and (max-width: 1024px) {
-		padding-bottom: 80px;
+		padding-bottom: 200px;
 	}
 	@media screen and (max-width: 480px) {
-		padding-bottom: 50px;
+		padding-bottom: 100px;
 	}
 	&__headline {
 		margin-bottom: 55px;
@@ -7088,6 +7315,7 @@ section {
 		@media screen and (max-width: 1024px) {
 			margin: 0 0 40px 0;
 			font-size: 22px;
+			line-height: 170%;
 		}
 		@media screen and (max-width: 480px) {
 			margin: 0 0 20px 0;
@@ -7104,6 +7332,7 @@ section {
 				padding-left: 34px;
 				@media screen and (max-width: 1024px) {
 					font-size: 22px;
+					line-height: 170%;
 				}
 				@media screen and (max-width: 480px) {
 					font-size: 16px;
@@ -7743,6 +7972,10 @@ section {
 			display: block;
 			margin-top: 4px;
 			margin-right: 9px;
+			opacity: 0.5;
+			&:checked {
+				opacity: 1;
+			}
 		}
 	}
 
@@ -7804,6 +8037,7 @@ section {
 		& ul {
 			margin-top: 30px;
 			& li {
+				display: flex;
 				& span {
 					color: #fc0d1b;
 					padding-right: 15px;
@@ -7903,13 +8137,13 @@ section {
 		font-size: 40px;
 		line-height: 122%;
 		max-width: 1100px;
-		padding: 130px 0 180px;
+		padding: 230px 0 180px;
 		@media screen and (max-width: 1024px) {
 			font-size: 34px;
-			padding: 100px 0;
+			padding: 220px 0 100px;
 		}
 		@media screen and (max-width: 480px) {
-			padding: 60px 0;
+			padding: 135px 0 60px;
 			font-size: 24px;
 		}
 	}
@@ -7950,9 +8184,11 @@ section {
 		font-feature-settings: "pnum" on, "lnum" on;
 		@media screen and (max-width: 1024px) {
 			font-size: 22px;
+			line-height: 170%;
 		}
 		@media screen and (max-width: 480px) {
 			font-size: 16px;
+			line-height: 135%;
 		}
 		& ul {
 			& li {
@@ -8011,12 +8247,12 @@ section {
 }
 
 .use {
-	padding: 150px 0;
+	padding: 150px 0 200px;
 	@media screen and (max-width: 1024px) {
-		padding: 100px 0;
+		padding: 200px 0;
 	}
 	@media screen and (max-width: 480px) {
-		padding: 50px 0;
+		padding: 100px 0;
 	}
 	&__content {
 		display: flex;
@@ -8036,10 +8272,12 @@ section {
 		@media screen and (max-width: 1024px) {
 			margin: 0 0 60px 0;
 			font-size: 22px;
+			line-height: 170%;
 		}
 		@media screen and (max-width: 480px) {
 			margin: 0 0 30px 0;
 			font-size: 16px;
+			line-height: 135%;
 		}
 		& p {
 			font-weight: 500;
@@ -8400,7 +8638,11 @@ section {
 }
 
 .air-datepicker-body--day-name {
+	text-transform: capitalize;
 	color: #363636;
+	@media screen and (min-width: 769px) {
+		margin-bottom: 10px;
+	}
 	@media screen and (max-width: 768px) {
 		margin-bottom: 25px;
 		width: 50px;
@@ -8418,6 +8660,7 @@ section {
 }
 
 .air-datepicker-body--cells {
+	grid-row-gap: 5px;
 	@media screen and (max-width: 768px) {
 		grid-row-gap: 25px;
 	}
@@ -8617,5 +8860,93 @@ section {
 	}
 	& input {
 		display: none;
+	}
+}
+
+.back {
+	background: #ffffff;
+	box-shadow: 0px -4px 34px rgba(0, 0, 0, 0.25);
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.5s ease 0s;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 8;
+	width: 100%;
+	&._scroll {
+		opacity: 1;
+		visibility: visible;
+	}
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		padding: 30px 0;
+		@media screen and (max-width: 480px) {
+			padding: 20px;
+		}
+	}
+
+	&__links {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 30px 0 -10px;
+		@media screen and (max-width: 480px) {
+			margin: 0 20px 0 -5px;
+		}
+		& a {
+			margin: 5px 0;
+			padding: 0 10px;
+			font-size: 15px;
+			line-height: 120%;
+			color: #363636;
+			border-right: 1.5px solid #363636;
+			transition: opacity 0.3s ease 0s;
+			&:last-child {
+				border-right: none;
+			}
+			@media screen and (max-width: 1024px) {
+				font-size: 22px;
+			}
+			@media screen and (max-width: 480px) {
+				padding: 0 5px;
+				font-size: 12px;
+			}
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		& a {
+			display: flex;
+			align-items: center;
+			transition: opacity 0.3s ease 0s;
+			&:hover {
+				opacity: 0.7;
+			}
+			& svg {
+				@media screen and (max-width: 480px) {
+					width: 10px;
+					height: 10px;
+				}
+			}
+			& span {
+				font-size: 15px;
+				line-height: 120%;
+				color: #363636;
+				margin-left: 10px;
+				@media screen and (max-width: 1024px) {
+					font-size: 22px;
+				}
+				@media screen and (max-width: 480px) {
+					font-size: 12px;
+					margin-left: 5px;
+				}
+			}
+		}
 	}
 }

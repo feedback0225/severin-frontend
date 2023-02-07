@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/air-datepicket.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
 	<title>Document</title>
@@ -14,7 +15,7 @@
 <body>
 	<div class="wrapper">
 		<div class="top-block top-block_mini">
-			<header class="top-block__header header">
+			<header class="top-block__header header lock-padding">
 				<div class="container">
 					<div class="header__content">
 						<a href="#" class="header__logo">
@@ -315,7 +316,7 @@
 					Управление стоимостью
 				</h1>
 				<div class="top-block__text">
-					<a href="#" class="top-block__more more">
+					<a href="#popup-call" class="top-block__more more popup-link">
 						<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M15 13.5H1V0.5H15V13.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
 							<rect x="4" y="3.5" width="8" height="1" rx="0.5" fill="white" />
@@ -754,7 +755,7 @@
 							</div>
 						</div>
 						<div class="questions__right">
-							<a href="#" class="questions__icon">
+							<a href="#popup-meeting" class="questions__icon popup-link">
 								<div class="questions__icon-wrap">
 									<video>
 										<source src="@img/icons-video/calendar.mp4" type="video/mp4">
@@ -766,7 +767,7 @@
 									Назначить <br> встречу
 								</span>
 							</a>
-							<a href="#" class="questions__icon">
+							<a href="#popup-call" class="questions__icon popup-link">
 								<div class="questions__icon-wrap">
 									<video>
 										<source src="@img/icons-video/call.mp4" type="video/mp4">
@@ -778,7 +779,7 @@
 									Заказать <br> звонок
 								</span>
 							</a>
-							<a href="#" class="questions__icon">
+							<a href="#popup-message" class="questions__icon popup-link">
 								<div class="questions__icon-wrap">
 									<video>
 										<source src="@img/icons-video/email.mp4" type="video/mp4">
@@ -839,10 +840,11 @@
 								Карта сайта
 							</a>
 							<div class="footer__politic">
-								Ознакомиться с <a href="#">Политикой конфиденциальности</a>
+								Ознакомиться <br> с <a href="#">Политикой конфиденциальности</a>
 							</div>
 							<span>
-								© 2004 — 2022 SEVERIN DEVELOPMENT. Все права защищены. Все фотоматериалы, размещенные на сайте,
+								© 2004 — 2022 SEVERIN DEVELOPMENT. <br> Все права защищены. Все фотоматериалы, размещенные на
+								сайте,
 								имеют лицензии, не являются рекламой, носят иллюстративный характер. Копирование текстов без
 								указания источника запрещено.
 							</span>
@@ -977,6 +979,378 @@
 			<div class="footer__line"></div>
 		</footer>
 	</div>
+	<nav class="back">
+		<div class="container">
+			<div class="back__content">
+				<div class="back__links">
+					<a href="#">Услуги</a>
+					<a href="#">Технический заказчик</a>
+					<a href="#">Управление стоимостью</a>
+				</div>
+				<div class="back__top">
+					<a href="#">
+						<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M0.278417 6.21306L6.32784 0.273367C6.69906 -0.0911229 7.30094 -0.0911229 7.67216 0.273367L13.7216 6.21306C14.0928 6.57755 14.0928 7.16851 13.7216 7.533C13.3504 7.89749 12.7485 7.89749 12.3773 7.533L7.95057 3.1866L7.95058 14L6.04942 14L6.04942 3.1866L1.62273 7.533C1.25151 7.89749 0.64964 7.89749 0.278417 7.533C-0.092806 7.16851 -0.092806 6.57755 0.278417 6.21306Z"
+								fill="#363636" />
+						</svg>
+						<span>Наверх</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div id="popup-call" class="popup popup_call">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a href="#" class="popup__close close-popup">
+					<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
+						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
+						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
+						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
+							fill="#FC0D1B" />
+						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
+							fill="#FC0D1B" />
+						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
+							fill="#FC0D1B" />
+					</svg>
+				</a>
+				<div class="popup__left">
+					<img loading="lazy" src="img/popup/logo.svg" alt="">
+					<span>
+						Заказать звонок
+					</span>
+					<p>
+						Оставьте заявку, и мы свяжемся с Вами в ближайшее время
+					</p>
+					<form action="#" class="popup__form">
+						<input type="text" placeholder="Имя">
+						<input type="text" placeholder="Телефон" class="phone-mask">
+						<input type="text" placeholder="Ваш вопрос">
+						<div class="popup__check">
+							<input type="checkbox" id="agree">
+							<label for="agree">
+								<span>
+									Я согласен на обработку моих персональных
+									данных <br> и с <a href="confidence.html">политикой
+										конфиденциальности</a>
+								</span>
+							</label>
+						</div>
+						<button href="#" class="popup__more more">
+							<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15 13.5H1V0.5H15V13.5Z" stroke="white" stroke-linecap="round"
+									stroke-linejoin="round" />
+								<rect x="4" y="3.5" width="8" height="1" rx="0.5" fill="white" />
+								<rect x="4" y="6.5" width="8" height="1" rx="0.5" fill="white" />
+								<rect x="4" y="9.5" width="8" height="1" rx="0.5" fill="white" />
+							</svg>
+							<span>Заказать звонок</span>
+						</button>
+					</form>
+				</div>
+				<div class="popup__right">
+					<picture>
+						<source srcset="img/popup/call.png 1x, img/popup/call@2x.png 2x">
+						<img loading="lazy" srcset="img/popup/call.png" alt="team">
+					</picture>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="popup-message" class="popup popup_call">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a href="#" class="popup__close close-popup">
+					<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
+						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
+						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
+						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
+							fill="#FC0D1B" />
+						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
+							fill="#FC0D1B" />
+						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
+							fill="#FC0D1B" />
+					</svg>
+				</a>
+				<div class="popup__left">
+					<img loading="lazy" src="img/popup/logo.svg" alt="">
+					<span>
+						Написать сообщение
+					</span>
+					<p>
+						Оставьте Ваше сообщение, и мы с Вами свяжемся
+					</p>
+					<form action="#" class="popup__form">
+						<input type="text" placeholder="Имя">
+						<input type="text" placeholder="E-mail">
+						<input type="text" placeholder="Сообщение">
+						<div class="popup__check">
+							<input type="checkbox" id="agree">
+							<label for="agree">
+								<span>
+									Я согласен на обработку моих персональных
+									данных <br> и с <a href="confidence.html"> политикой
+										конфиденциальности</a>
+								</span>
+							</label>
+						</div>
+						<button href="#" class="popup__more more">
+							<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15 13.5H1V0.5H15V13.5Z" stroke="white" stroke-linecap="round"
+									stroke-linejoin="round" />
+								<rect x="4" y="3.5" width="8" height="1" rx="0.5" fill="white" />
+								<rect x="4" y="6.5" width="8" height="1" rx="0.5" fill="white" />
+								<rect x="4" y="9.5" width="8" height="1" rx="0.5" fill="white" />
+							</svg>
+							<span>Заказать звонок</span>
+						</button>
+					</form>
+				</div>
+				<div class="popup__right">
+					<picture>
+						<source srcset="img/popup/message.png 1x, img/popup/message@2x.png 2x">
+						<img loading="lazy" srcset="img/popup/message.png" alt="team">
+					</picture>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="popup-meeting" class="popup popup_calendar">
+		<div class="popup__body">
+			<div class="popup__content">
+				<img src="img/popup/logo.svg" alt="logo">
+				<a href="#" class="popup__close close-popup">
+					<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
+						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
+						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
+						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
+							fill="#FC0D1B" />
+						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
+							fill="#FC0D1B" />
+						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
+							fill="#FC0D1B" />
+					</svg>
+				</a>
+				<div class="popup__left">
+					<img src="img/popup/logo.svg" alt="logo">
+					<span>
+						30-минутная встреча
+					</span>
+					<p class="popup__time-finish">
+						<span>30 сентября, пятница <br> 14:00</span> (Время Московское)
+					</p>
+					<div class="popup__points">
+						<div>
+							<img src="img/icons/popup-time.svg" alt="icon">
+							<span>
+								30 минут
+							</span>
+						</div>
+						<div>
+							<img src="img/icons/popup-camera.svg" alt="icon">
+							<span>
+								Информация о веб-конференции
+								будет направлена вам после
+								подтверждения
+							</span>
+						</div>
+					</div>
+					<p>
+						Мы расскажем о компании
+						SEVERIN DEVELOPMENT
+						и&nbsp;обсудим ваш проект
+					</p>
+					<button href="#" class="popup__more more">
+						<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M15 13.5H1V0.5H15V13.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+							<rect x="4" y="3.5" width="8" height="1" rx="0.5" fill="white" />
+							<rect x="4" y="6.5" width="8" height="1" rx="0.5" fill="white" />
+							<rect x="4" y="9.5" width="8" height="1" rx="0.5" fill="white" />
+						</svg>
+						<span>Выбрать дату</span>
+					</button>
+				</div>
+				<div class="popup__left-finish">
+					<img src="img/popup/logo.svg" alt="logo">
+					<p>
+						Персональная встреча назначена
+					</p>
+					<p>
+						30 сентября 2023, 13:30
+					</p>
+					<span>
+						Время Московское
+					</span>
+					<span>
+						Детальная информация и ссылка <br> отправлены Вам на почту
+					</span>
+				</div>
+				<div class="popup__right">
+					<picture>
+						<source srcset="img/popup/meeting.png 1x, img/popup/meeting@2x.png 2x">
+						<img loading="lazy" srcset="img/popup/meeting.png" alt="team">
+					</picture>
+					<form action="#" class="popup__time">
+						<div class="popup__calendar">
+							<span class="popup__mini-headline">
+								Выберите дату <span>и время</span>
+							</span>
+							<div id="calendar">
+							</div>
+							<p>
+								Часовой пояс: <span>Москва</span> <span>(14:46)</span>
+							</p>
+							<button href="#" class="popup__more more">
+								<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M15 13.5H1V0.5H15V13.5Z" stroke="white" stroke-linecap="round"
+										stroke-linejoin="round" />
+									<rect x="4" y="3.5" width="8" height="1" rx="0.5" fill="white" />
+									<rect x="4" y="6.5" width="8" height="1" rx="0.5" fill="white" />
+									<rect x="4" y="9.5" width="8" height="1" rx="0.5" fill="white" />
+								</svg>
+								<span>Выбрать время</span>
+							</button>
+						</div>
+						<div class="popup__dates dates">
+							<div class="dates__mob-div">
+								<span class="popup__mini-headline">
+									Выберите время
+								</span>
+								<span class="dates__date">
+									30 сентября 2023, пятница
+								</span>
+								<p>
+									Часовой пояс: <span>Москва</span> <span>(14:46)</span>
+								</p>
+							</div>
+							<span class="dates__date">
+								30 сентября, пятница
+							</span>
+							<div class="dates__item">
+								<input type="radio" id="10:00" name="time" value="10:00">
+								<label for="10:00"><span>10:00</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="10:30" name="time" value="10:30">
+								<label for="10:30"><span>10:30</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="11:00" name="time" value="11:00">
+								<label for="11:00"><span>11:00</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="11:30" name="time" value="11:30">
+								<label for="11:30"><span>11:30</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="12:00" name="time" value="12:00">
+								<label for="12:00"><span>12:00</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="12:30" name="time" value="12:30">
+								<label for="12:30"><span>12:30</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="14:00" name="time" value="14:00">
+								<label for="14:00"><span>14:00</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="14:30" name="time" value="14:30">
+								<label for="14:30"><span>14:30</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="15:00" name="time" value="15:00">
+								<label for="15:00"><span>15:00</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="15:30" name="time" value="15:30">
+								<label for="15:30"><span>15:30</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="16:00" name="time" value="16:00">
+								<label for="16:00"><span>16:00</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="16:30" name="time" value="16:30">
+								<label for="16:30"><span>16:30</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="17:00" name="time" value="17:00">
+								<label for="17:00"><span>17:00</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="17:30" name="time" value="17:30">
+								<label for="17:30"><span>17:30</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="18:00" name="time" value="18:00">
+								<label for="18:00"><span>18:00</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+						</div>
+					</form>
+					<form action="#" class="popup__form">
+						<span class="popup__mini-headline">
+							Контактная информация
+						</span>
+						<p>
+							Оставьте Ваше сообщение, <br> и мы с Вами свяжемся
+						</p>
+						<div class="popup__inputs">
+							<div>
+								<input type="text" placeholder="Имя">
+								<input type="text" placeholder="Компания">
+							</div>
+							<div>
+								<input type="text" placeholder="Телефон" class="phone-mask">
+								<input type="text" placeholder="E-mail">
+							</div>
+						</div>
+						<div class="popup__check">
+							<input type="checkbox" id="agree">
+							<label for="agree">
+								<span>
+									Я согласен на обработку моих персональных
+									данных <br> и с <a href="confidence.html">политикой
+										конфиденциальности</a>
+								</span>
+							</label>
+						</div>
+						<button type="submit" class="popup__more more">
+							<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15 13.5H1V0.5H15V13.5Z" stroke="white" stroke-linecap="round"
+									stroke-linejoin="round" />
+								<rect x="4" y="3.5" width="8" height="1" rx="0.5" fill="white" />
+								<rect x="4" y="6.5" width="8" height="1" rx="0.5" fill="white" />
+								<rect x="4" y="9.5" width="8" height="1" rx="0.5" fill="white" />
+							</svg>
+							<span>Назначить встречу</span>
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/air-datepicket.js"></script>
+	<script src="js/imask.js"></script>
 	<script src="js/ScrollMagic.min.js"></script>
 	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 	<script src="js/swiper.js"></script>

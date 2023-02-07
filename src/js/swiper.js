@@ -20,14 +20,20 @@ const myImageSlider = new Swiper('.slider__container', {
 	// отключение функционала если слайдов меньше чем нужно
 	watchOverflow: true,
 
-	// кол-во пролистываемых слайдов
-	slidesPerGroup: 1,
-
-	//стартовый слайд
+	// стартовый слайд
 	initialSlide: 0,
 
+	// свободный режим
+	freeMode: true,
+
 	// скорость прокрутки слайдов
-	speed: 600,
+	speed: 12000,
+
+	autoplay: {
+		enabled: false,
+		delay: 100,
+		disableOnInteraction: true,
+	},
 
 	// брейкпоинты (адаптив, ширина)
 	breakpoints: {
@@ -52,6 +58,18 @@ const myImageSlider = new Swiper('.slider__container', {
 	watchSlidesVisibility: true, // добавление класса видимым слайдам
 
 });
+
+const slider = document.querySelector('.slider__container');
+
+if (slider) {
+	slider.addEventListener('mouseenter', function () {
+		myImageSlider.autoplay.start();
+	})
+	slider.addEventListener('mouseleave', function () {
+		myImageSlider.autoplay.stop();
+	})
+}
+
 
 const myImageSlider2 = new Swiper('.slider2__container', {
 	// НАСТРОЙКИ

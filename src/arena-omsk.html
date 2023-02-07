@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/air-datepicket.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
 	<title>Document</title>
@@ -14,7 +15,7 @@
 <body>
 	<div class="wrapper">
 		<div class="top-block top-block_mini top-block__item-portfolio">
-			<header class="top-block__header header">
+			<header class="top-block__header header lock-padding">
 				<div class="container">
 					<div class="header__content">
 						<a href="#" class="header__logo">
@@ -316,10 +317,14 @@
 					«Арена Омск»
 				</h1>
 				<p>
-					<svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<svg width="15" height="22" viewBox="0 0 15 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path
-							d="M16 8.01375C16 3.59107 12.4151 0 8 0C3.58491 0 0 3.59107 0 8.01375C0 11.6426 6.67924 17.6151 6.67924 17.6151C4.79245 17.7285 1.62264 18.1821 1.62264 19.7698C1.62264 21.9244 7.35849 22 8.03773 22C8.71698 22 14.4528 21.9244 14.4528 19.7698C14.4528 18.1443 11.2453 17.7285 9.35849 17.6151C9.35849 17.6151 16 11.6804 16 8.01375ZM10.6038 8.01375C10.6038 9.45017 9.43396 10.622 8 10.622C6.56604 10.622 5.39623 9.45017 5.39623 8.01375C5.39623 6.57732 6.56604 5.4055 8 5.4055C9.43396 5.4055 10.6038 6.57732 10.6038 8.01375ZM13.0943 19.7698C12.717 20.1478 10.8679 20.7148 8 20.7148C5.16981 20.7148 3.32075 20.1478 2.90566 19.7698C3.24528 19.4296 4.79245 18.9381 7.13207 18.8625L7.54717 19.9588C7.62264 20.1478 7.77358 20.2612 8 20.2612C8.18868 20.2612 8.37736 20.1478 8.45283 19.9588L8.83019 18.8625C11.2075 18.9381 12.717 19.4296 13.0943 19.7698Z"
-							fill="white" />
+							d="M13.5 6.27414C13.5 7.02384 13.1367 8.16616 12.5283 9.51939C11.9297 10.8509 11.1276 12.3155 10.3196 13.682C9.51259 15.0469 8.70484 16.3054 8.09845 17.2232C7.86509 17.5765 7.66175 17.8789 7.5 18.1172C7.33825 17.8789 7.13491 17.5765 6.90155 17.2232C6.29516 16.3054 5.48741 15.0469 4.6804 13.682C3.8724 12.3155 3.07026 10.8509 2.47166 9.51939C1.8633 8.16616 1.5 7.02384 1.5 6.27414C1.5 3.10169 4.16948 0.5 7.5 0.5C10.8305 0.5 13.5 3.10169 13.5 6.27414Z"
+							stroke="white" />
+						<circle cx="7.5" cy="6.5" r="3" stroke="white" />
+						<path
+							d="M5 16C2.65105 16.3918 1 17.319 1 18.4004C1 19.8361 3.91015 21 7.5 21C11.0899 21 14 19.8361 14 18.4004C14 17.319 12.349 16.3918 10 16"
+							stroke="white" />
 					</svg>
 					г. Омск
 				</p>
@@ -346,29 +351,34 @@
 						</a>
 					</div>
 					<div class="building__content">
+						<div class="trigger1"></div>
 						<div class="building__left">
-							<div class="building__left-top">
-								<div class="building__item">
-									<p><span>10</span><span>млрд. рублей</span></p>
-									<span>Объём инвестиций</span>
-								</div>
-							</div>
-							<div class="building__left-bottom">
-								<div class="building__item">
-									<p><span></span><span>60 000 кв.м.</span></p>
-									<span>Общая площадь</span>
-								</div>
-								<div class="building__item">
-									<p><span></span><span>Омская область</span></p>
-									<span>Концедент</span>
-								</div>
-								<div class="building__item">
-									<p><span></span><span>60 000 кв.м.</span></p>
-									<span>финансирование</span>
-								</div>
-								<div class="building__item">
-									<p><span></span><span>ООО “Арена-Инжиниринг”</span></p>
-									<span>Заказчик</span>
+							<div class="building__sticky pin1">
+								<div class="building__left-wrapper">
+									<div class="building__left-top">
+										<div class="building__item">
+											<p><span>10</span><span>млрд. рублей</span></p>
+											<span>Объём инвестиций</span>
+										</div>
+									</div>
+									<div class="building__left-bottom">
+										<div class="building__item">
+											<p><span></span><span>60 000 кв.м.</span></p>
+											<span>Общая площадь</span>
+										</div>
+										<div class="building__item">
+											<p><span></span><span>Омская область</span></p>
+											<span>Концедент</span>
+										</div>
+										<div class="building__item">
+											<p><span></span><span>60 000 кв.м.</span></p>
+											<span>финансирование</span>
+										</div>
+										<div class="building__item">
+											<p><span></span><span>ООО “Арена-Инжиниринг”</span></p>
+											<span>Заказчик</span>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -457,7 +467,7 @@
 							</div>
 						</div>
 						<div class="questions__right">
-							<a href="#" class="questions__icon">
+							<a href="#popup-meeting" class="questions__icon popup-link">
 								<div class="questions__icon-wrap">
 									<video>
 										<source src="@img/icons-video/calendar.mp4" type="video/mp4">
@@ -550,10 +560,11 @@
 								Карта сайта
 							</a>
 							<div class="footer__politic">
-								Ознакомиться с <a href="#">Политикой конфиденциальности</a>
+								Ознакомиться <br> с <a href="#">Политикой конфиденциальности</a>
 							</div>
 							<span>
-								© 2004 — 2022 SEVERIN DEVELOPMENT. Все права защищены. Все фотоматериалы, размещенные на сайте,
+								© 2004 — 2022 SEVERIN DEVELOPMENT. <br> Все права защищены. Все фотоматериалы, размещенные на
+								сайте,
 								имеют лицензии, не являются рекламой, носят иллюстративный характер. Копирование текстов без
 								указания источника запрещено.
 							</span>
@@ -726,7 +737,7 @@
 								</span>
 							</label>
 						</div>
-						<a href="#" class="popup__more more">
+						<button href="#" class="popup__more more">
 							<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M15 13.5H1V0.5H15V13.5Z" stroke="white" stroke-linecap="round"
 									stroke-linejoin="round" />
@@ -735,7 +746,7 @@
 								<rect x="4" y="9.5" width="8" height="1" rx="0.5" fill="white" />
 							</svg>
 							<span>Заказать звонок</span>
-						</a>
+						</button>
 					</form>
 				</div>
 				<div class="popup__right">
@@ -785,7 +796,7 @@
 								</span>
 							</label>
 						</div>
-						<a href="#" class="popup__more more">
+						<button href="#" class="popup__more more">
 							<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M15 13.5H1V0.5H15V13.5Z" stroke="white" stroke-linecap="round"
 									stroke-linejoin="round" />
@@ -794,7 +805,7 @@
 								<rect x="4" y="9.5" width="8" height="1" rx="0.5" fill="white" />
 							</svg>
 							<span>Заказать звонок</span>
-						</a>
+						</button>
 					</form>
 				</div>
 				<div class="popup__right">
@@ -806,6 +817,238 @@
 			</div>
 		</div>
 	</div>
+	<div id="popup-meeting" class="popup popup_calendar">
+		<div class="popup__body">
+			<div class="popup__content">
+				<img src="img/popup/logo.svg" alt="logo">
+				<a href="#" class="popup__close close-popup">
+					<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
+						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
+						<rect y="1.41406" width="2" height="19" transform="rotate(-45 0 1.41406)" fill="#FC0D1B" />
+						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
+							fill="#FC0D1B" />
+						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
+							fill="#FC0D1B" />
+						<rect x="1.41406" y="14.8516" width="2" height="19" transform="rotate(-135 1.41406 14.8516)"
+							fill="#FC0D1B" />
+					</svg>
+				</a>
+				<div class="popup__left">
+					<img src="img/popup/logo.svg" alt="logo">
+					<span>
+						30-минутная встреча
+					</span>
+					<p class="popup__time-finish">
+						<span>30 сентября, пятница <br> 14:00</span> (Время Московское)
+					</p>
+					<div class="popup__points">
+						<div>
+							<img src="img/icons/popup-time.svg" alt="icon">
+							<span>
+								30 минут
+							</span>
+						</div>
+						<div>
+							<img src="img/icons/popup-camera.svg" alt="icon">
+							<span>
+								Информация о веб-конференции
+								будет направлена вам после
+								подтверждения
+							</span>
+						</div>
+					</div>
+					<p>
+						Мы расскажем о компании
+						SEVERIN DEVELOPMENT
+						и&nbsp;обсудим ваш проект
+					</p>
+					<button href="#" class="popup__more more">
+						<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M15 13.5H1V0.5H15V13.5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+							<rect x="4" y="3.5" width="8" height="1" rx="0.5" fill="white" />
+							<rect x="4" y="6.5" width="8" height="1" rx="0.5" fill="white" />
+							<rect x="4" y="9.5" width="8" height="1" rx="0.5" fill="white" />
+						</svg>
+						<span>Выбрать дату</span>
+					</button>
+				</div>
+				<div class="popup__left-finish">
+					<img src="img/popup/logo.svg" alt="logo">
+					<p>
+						Персональная встреча назначена
+					</p>
+					<p>
+						30 сентября 2023, 13:30
+					</p>
+					<span>
+						Время Московское
+					</span>
+					<span>
+						Детальная информация и ссылка <br> отправлены Вам на почту
+					</span>
+				</div>
+				<div class="popup__right">
+					<picture>
+						<source srcset="img/popup/meeting.png 1x, img/popup/meeting@2x.png 2x">
+						<img loading="lazy" srcset="img/popup/meeting.png" alt="team">
+					</picture>
+					<form action="#" class="popup__time">
+						<div class="popup__calendar">
+							<span class="popup__mini-headline">
+								Выберите дату <span>и время</span>
+							</span>
+							<div id="calendar">
+							</div>
+							<p>
+								Часовой пояс: <span>Москва</span> <span>(14:46)</span>
+							</p>
+							<button href="#" class="popup__more more">
+								<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M15 13.5H1V0.5H15V13.5Z" stroke="white" stroke-linecap="round"
+										stroke-linejoin="round" />
+									<rect x="4" y="3.5" width="8" height="1" rx="0.5" fill="white" />
+									<rect x="4" y="6.5" width="8" height="1" rx="0.5" fill="white" />
+									<rect x="4" y="9.5" width="8" height="1" rx="0.5" fill="white" />
+								</svg>
+								<span>Выбрать время</span>
+							</button>
+						</div>
+						<div class="popup__dates dates">
+							<div class="dates__mob-div">
+								<span class="popup__mini-headline">
+									Выберите время
+								</span>
+								<span class="dates__date">
+									30 сентября 2023, пятница
+								</span>
+								<p>
+									Часовой пояс: <span>Москва</span> <span>(14:46)</span>
+								</p>
+							</div>
+							<span class="dates__date">
+								30 сентября, пятница
+							</span>
+							<div class="dates__item">
+								<input type="radio" id="10:00" name="time" value="10:00">
+								<label for="10:00"><span>10:00</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="10:30" name="time" value="10:30">
+								<label for="10:30"><span>10:30</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="11:00" name="time" value="11:00">
+								<label for="11:00"><span>11:00</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="11:30" name="time" value="11:30">
+								<label for="11:30"><span>11:30</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="12:00" name="time" value="12:00">
+								<label for="12:00"><span>12:00</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="12:30" name="time" value="12:30">
+								<label for="12:30"><span>12:30</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="14:00" name="time" value="14:00">
+								<label for="14:00"><span>14:00</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="14:30" name="time" value="14:30">
+								<label for="14:30"><span>14:30</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="15:00" name="time" value="15:00">
+								<label for="15:00"><span>15:00</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="15:30" name="time" value="15:30">
+								<label for="15:30"><span>15:30</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="16:00" name="time" value="16:00">
+								<label for="16:00"><span>16:00</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="16:30" name="time" value="16:30">
+								<label for="16:30"><span>16:30</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="17:00" name="time" value="17:00">
+								<label for="17:00"><span>17:00</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="17:30" name="time" value="17:30">
+								<label for="17:30"><span>17:30</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+							<div class="dates__item">
+								<input type="radio" id="18:00" name="time" value="18:00">
+								<label for="18:00"><span>18:00</span></label>
+								<button type="submit">Выбрать</button>
+							</div>
+						</div>
+					</form>
+					<form action="#" class="popup__form">
+						<span class="popup__mini-headline">
+							Контактная информация
+						</span>
+						<p>
+							Оставьте Ваше сообщение, <br> и мы с Вами свяжемся
+						</p>
+						<div class="popup__inputs">
+							<div>
+								<input type="text" placeholder="Имя">
+								<input type="text" placeholder="Компания">
+							</div>
+							<div>
+								<input type="text" placeholder="Телефон" class="phone-mask">
+								<input type="text" placeholder="E-mail">
+							</div>
+						</div>
+						<div class="popup__check">
+							<input type="checkbox" id="agree">
+							<label for="agree">
+								<span>
+									Я согласен на обработку моих персональных
+									данных <br> и с <a href="confidence.html">политикой
+										конфиденциальности</a>
+								</span>
+							</label>
+						</div>
+						<button type="submit" class="popup__more more">
+							<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15 13.5H1V0.5H15V13.5Z" stroke="white" stroke-linecap="round"
+									stroke-linejoin="round" />
+								<rect x="4" y="3.5" width="8" height="1" rx="0.5" fill="white" />
+								<rect x="4" y="6.5" width="8" height="1" rx="0.5" fill="white" />
+								<rect x="4" y="9.5" width="8" height="1" rx="0.5" fill="white" />
+							</svg>
+							<span>Назначить встречу</span>
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/air-datepicket.js"></script>
 	<script src="js/imask.js"></script>
 	<script src="js/ScrollMagic.min.js"></script>
 	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
