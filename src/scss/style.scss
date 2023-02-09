@@ -5472,25 +5472,14 @@ section {
 	}
 	&__content {
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		@media screen and (max-width: 1024px) {
 			flex-direction: column;
 		}
 	}
 
 	&__lottie {
-		position: relative;
 		width: 100%;
-		flex: 1 1 100%;
-		padding-bottom: 50%;
-		& svg {
-			width: 400% !important;
-			height: 400% !important;
-			display: block;
-			position: absolute;
-			left: -160%;
-			top: -165%;
-		}
 	}
 
 	&__item {
@@ -5503,6 +5492,8 @@ section {
 	&__left {
 		flex: 1 1 47.3%;
 		margin-right: 88px;
+		position: sticky;
+		top: 20%;
 		display: flex;
 		@media screen and (max-width: 1024px) {
 			margin: 0 0 88px 0;
@@ -5517,6 +5508,13 @@ section {
 		flex: 1 1 52.7%;
 		font-size: 18px;
 		line-height: 150%;
+		.animation__item {
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+			flex-direction: column;
+			height: 100vh;
+		}
 		@media screen and (max-width: 1024px) {
 			font-size: 22px;
 			line-height: 170%;
