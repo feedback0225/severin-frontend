@@ -436,9 +436,7 @@
 									<div class="animation__pagination animation__pagination_6"></div>
 									<div class="animation__pagination animation__pagination_7"></div>
 								</div>
-								<div class="animation__lottie lottie3" id="MyContainerId">
-									<lottie-player src="img/services/top-block/3seqdata_lottie.json"
-										id="firstLottie"></lottie-player>
+								<div class="animation__lottie lottie3" id="firstLottie">
 								</div>
 							</div>
 							<div class="animation__right">
@@ -942,19 +940,58 @@
 	<script src="js/animations.js"></script>
 	<script src="js/app.min.js"></script>
 	<script src="https://unpkg.com/@lottiefiles/lottie-interactivity@1.6.2/dist/lottie-interactivity.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.4.2/lottie.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script>
-		LottieInteractivity.create({
-			player: '#firstLottie',
-			mode: "scroll",
-			duration: '80%',
-			actions: [
-				{
-					visibility:[0.15, 1.0],
-					type: "seek",
-					frames: [0, 300],
+		var animData = {
+			container: document.getElementById('firstLottie'),
+			path: 'img/services/top-block/3seqdata_lottie.json',
+			renderer: 'svg',
+			loop: true,
+			autoplay: false,
+			name: "animScroll",
+		}, animScroll, tl;
+
+
+		var animScroll = bodymovin.loadAnimation(animData)
+
+
+		animScroll.addEventListener('DOMLoaded', function () {
+			tl = new TimelineMax({ repeat: 1 })
+			tl.to({ frame: 0 }, 1, {
+				frame: animScroll.totalFrames - 1,
+				onUpdate: function () {
+					animScroll.goToAndStop(Math.round(this.target.frame), true)
 				},
-			]
-		});
+				Ease: Linear.easeNone
+			})
+
+			var controller = new ScrollMagic.Controller();
+
+			var scene = new ScrollMagic.Scene({
+				triggerElement: ".env-three",
+				offset: 300,
+				duration: 9000
+			}).setTween(tl).setPin("#lottie-three").addTo(controller);
+
+		})
+		$(window).scroll(function(){
+			var y = $(window).scrollTop();
+			var elem = $(".animation__item");
+			var pagination = $(".animation__pagination")
+			var windowHeight = $(window).height() / 3;
+			for (let i = 0; i < elem.length; i++) {
+				let elemTop = $(elem[i]).position().top
+				if(y-windowHeight>$(elem[i]).position().top) {
+					$(pagination).removeClass("animation__pagination_active")
+					$(pagination[i]).addClass("animation__pagination_active")
+				}
+			}
+			// console.log(y)
+		})
 	</script>
 </body>
 

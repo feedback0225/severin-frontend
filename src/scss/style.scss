@@ -5493,7 +5493,7 @@ section {
 		flex: 1 1 47.3%;
 		margin-right: 88px;
 		position: sticky;
-		top: 20%;
+		top: 40%;
 		display: flex;
 		@media screen and (max-width: 1024px) {
 			margin: 0 0 88px 0;
@@ -5508,6 +5508,8 @@ section {
 		flex: 1 1 52.7%;
 		font-size: 18px;
 		line-height: 150%;
+		position: relative;
+		z-index: 3;
 		.animation__item {
 			display: flex;
 			justify-content: center;
@@ -5768,6 +5770,18 @@ section {
 				}
 			}
 		}
+	}
+}
+
+.animation__lottie {
+	position: relative;
+	z-index: 2;
+	svg {
+		position: absolute;
+		width: 800px!important;
+		height: 800px!important;
+		left: -20%;
+		top: -150%;
 	}
 }
 
