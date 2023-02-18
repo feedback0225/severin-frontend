@@ -124,7 +124,7 @@ const myImageSlider3 = new Swiper('.projects-slider__container', {
 	grabCursor: true, // меняет стрелку на руку
 	slideToClickedSlide: true, // свайп по щелчку на изображении
 
-
+	loop: true,
 	// переключение на клавиатуре
 	keyboard: {
 		enabled: true, // вкл/выкл
@@ -136,7 +136,7 @@ const myImageSlider3 = new Swiper('.projects-slider__container', {
 	autoHeight: true, // подстаривает слайдер под размер контента
 
 	// кол-во показанных слайдов
-	slidesPerView: 2, // можно указывать десятичные числа. (auto - автоматическая ширина + css)
+	slidesPerView: "auto", // можно указывать десятичные числа. (auto - автоматическая ширина + css)
 
 	// кол-во пролистываемых слайдов
 	slidesPerGroup: 1,
@@ -147,15 +147,12 @@ const myImageSlider3 = new Swiper('.projects-slider__container', {
 	// брейкпоинты (адаптив, ширина)
 	breakpoints: {
 		320: {
-			slidesPerView: 1,
 			spaceBetween: 10,
 		},
 		580: {
-			slidesPerView: 1.5,
 			spaceBetween: 18,
 		},
 		992: {
-			slidesPerView: 2,
 			spaceBetween: 30,
 		}
 	},
