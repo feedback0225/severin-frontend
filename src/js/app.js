@@ -243,6 +243,9 @@ DynamicAdapt.prototype.indexInParent = function (parent, element) {
 // Функция сортировки массива по breakpoint и place 
 // по возрастанию для this.type = min
 // по убыванию для this.type = max
+
+
+
 DynamicAdapt.prototype.arraySort = function (arr) {
 	if (this.type === "min") {
 		Array.prototype.sort.call(arr, function (a, b) {

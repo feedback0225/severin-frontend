@@ -316,6 +316,7 @@ const myImageSlider6 = new Swiper('.use__slider', {
 
 });
 
+
 // ПАРАМЕТРЫ
 
 // let qSlides = myImageSlider.slides.length; = кол-во слайдов

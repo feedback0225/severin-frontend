@@ -1,4 +1,10 @@
 // инициализация Свайпера
+const services_animation = new Swiper('.services-animation-mobile .swiper', {
+	pagination: {
+        el: ".services-animation-mobile .swiper-pagination",
+	},
+});
+
 const myImageSlider = new Swiper('.slider__container', {
 	// НАСТРОЙКИ
 
